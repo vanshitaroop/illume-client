@@ -639,10 +639,31 @@ section {
   color: #47b2e4;
   line-height: 1;
 }
+/* same css for service section start */
 
-.about .content p:last-child {
-  margin-bottom: 0;
+.services ul{
+  list-style: none;
 }
+
+.services ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.services ul li+li {
+  margin-top: 10px;
+}
+
+.services ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
+
+
 
 .about .content .btn-learn-more {
   font-family: "Poppins", sans-serif;
