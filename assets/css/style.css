@@ -2088,3 +2088,6 @@ section {
 .laptop-version{
   cursor: pointer;
 }
+.dropdown a{
+  text-decoration: none;
+}
