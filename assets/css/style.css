@@ -2091,3 +2091,20 @@ section {
 .dropdown a{
   text-decoration: none;
 }
+@media screen and (max-width:600px) {
+  .laptops-res{
+      display: none;
+  }
+  .dd-menu a{
+    text-decoration: none;
+  }
+  .dd-menu li{
+    color: #5e5e5e ;
+  }
+ 
+}
+@media screen and (min-width:600px) {
+  .mobs-res{
+      display: none;
+  }
+}
