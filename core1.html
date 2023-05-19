@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/Illumeinitial.png" style="width: 100%;" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .icon-box {
+            width: 350px;
+            height: 360px;
+        }
+
+        .drow {
+            width: "50%";
+            text-align: "center"
+        }
+
+        .model-body h4 {
+
+            text-align: center;
+
+        }
+
+        .modal-body {
+            background-image: url("assets/img/elements.png");
+
+        }
+
+        .carr {
+            height: 700px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .icon-box {
+                margin: 20px;
+            }
+
+            .mobile-logo {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .laptop-res-row {
+                padding-left: 200px;
+                padding-top: 50px;
+                margin-left: "24px";
+                margin-right: "24px";
+            }
+
+        }
+
+        .book:hover {
+            color: antiquewhite;
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 80px;
+            right: 10px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+
+        .arrow-icon :hover {
+            color: #034993;
+            cursor: pointer;
+        }
+
+        #header {
+            background-color: #034993;
+        }
+
+        .containerr {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .sidenav {
+            width: 400px;
+            position: fixed;
+            z-index: 1;
+            top: 120px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+            border-radius: 2%;
+
+        }
+
+        /* .sidenav a:hover {
+            color: #064579;
+        } */
+
+        .main {
+            margin-left: 420px;
+            /* Same width as the sidebar + left position in px */
+            /* font-size: 28px; */
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+            margin-top: 120px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+
+        }
+
+        /* .content{
+            width: 60%;
+        } */
+        .active {
+            color: rgb(0, 0, 0);
+        }
+
+        .sidenav li {
+            cursor: pointer;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        /* [data-aos^=zoom][data-aos^=zoom].aos-animate { scale(1.1)} */
+
+        .team .member h1,h5,h3 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            /* font-size: 20px; */
+            color: #024893;
+        }
+
+        .team .member .pic {
+           overflow: hidden;
+            width: 400px;
+            border-radius: 5%;
+        }
+
+        .team .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.5s;
+  height: 100%;
+  
+}
+
+.team .member:hover {
+  transform: translateY(0);
+}
+
+/* .team{
+    width: auto;
+} */
+
+    </style>
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top" >
+        <div class="container d-flex align-items-center">
+
+            <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
+
+            <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt=""
+                    class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li class="dropdown"><a href="service.html"><span>Services</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="service.html">Direct tax and GST services</a></li>
+                            <li><a href="s2.html">International tax and transfer pricing services</a></li>
+                            <li><a href="s3.html">Regulatory services</a></li>
+                            <li><a href="s4.html">Transaction support</a></li>
+                            <li><a href="s5.html">Business and corporate services</a></li>
+                            <li><a href="s6.html">ESG Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="about.html">About</a></li>
+                    <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                            href="https://api.whatsapp.com/send?phone=918369850587&text=Hello"
+                            target="_blank">Connect</a></button>
+                    <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <br><br>
+
+    <section id="team" class="team section-bg">
+        <div class="container"  style="width: 100%;">
+
+            <div class="col-lg-6 mt-4" style =" margin: auto; width: 100%;" data-aos="zoom-in" >
+                
+                <div class="member d-flex align-items-start">
+                <div class="pic"><img src="assets/img/team/Picture1.jpg" style="size: 100%;" class="img-fluid" alt="todo"></div>
+                <div class="member-info">
+                    <h1>Yashesh Ashar
+                    </h1>
+                    <span>Chartered Accountant
+                    </span>
+                    
+                        <br>
+                        <h3>Background:</h3>
+                        <br>
+                        Yashesh has over 14 years of tax and regulatory experience as well as in M&A, group restructuring, inbound and outbound investment structuring, transaction structuring, due diligence, fund and structuring, tax modelling and negotiations, wealth and estate planning
+                        <br><br>
+                        Prior to this, he was a part of various Big 4 firms PwC and EY
+                        <br><br>
+                        Yashesh is a fellow member of the Institute of Chartered Accountants of India and a Bachelor of Commerce from the Mumbai University. 
+                        <br><br>
+                        Yashesh has authored / co-authored various articles on tax, regulatory and transaction aspects
+                        <br><br>
+                        Yashesh is also regularly invited by leading business dailies for contributing expert views /  articles
+                        <br><br>
+                        Yashesh is a TiE Charter Member and also, strategic advisor with MSME Business Forum
+
+                        
+                        <br><br>
+
+                        <h3>Skills:</h3>
+                        <br>
+                        <b>
+                        Tax advisory and structuring 
+                        <br><br>
+                        Legal drafting and documentations
+                        <br><br>
+                        Tax and GST compliance and representation
+                        <br><br>
+                        Regulatory advisory and compliance (FEMA, Company laws)
+                        <br><br>
+                        Tax advisory, compliance and litigation services
+                        <br><br>
+                        Financial accounting and auditing
+                        <br><br>
+                        Start-up advisory and fund raising
+                        </b>
+
+                        <br><br>
+
+                        <h3>Professional Experience:</h3>
+                        <br>
+                        <b>Acting as a qusai CFO / consultant for AIFs / VCFs handling accounting. Auditing, tax and regulatory compliance MIS, portfolio monitoring, investor relations etc.,</b>
+                        <br><br>
+                        Experience on variety of transactions and M&As ranging from USD 0.5 million to USD 3.5 billion
+                        <br><br>
+                        Experience on structuring and implementations of domestic & offshore funds with AUM of USD 5 million to USD 1.5 billion
+                        <br><br>
+                        End to end transaction implementation from term sheet stage through valuation, diligence, structuring, negotiations, documentations, closing and post-acquisition integration
+                        <br><br>
+                        Advising various private equity firms – offshore as well as domestic on structuring the fund as well as management structures
+                        <br><br>
+                        Experience in setting up alternative asset platforms across the entire spectrum 
+                        <br><br>
+                        Advised various financial services entities in formulating their entry strategy into India / structuring platforms in the financial services and private equity space
+                        <br><br>
+                        Advising HNIs / business houses in wealth and succession planning avenues as well as on immigration / migration abroad
+                        <br><br>
+                        Advising various start-up entrepreneurs fund raise, ESOPs, exits / listing opportunities
+                        <br><br>
+                        Fund raising for start-ups including preparation of pitch deck, financial modelling, valuation, advisory
+                    </p>
+                    <!-- <div class="social">
+                    <a href=""><i class="ri-twitter-fill"></i></a>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+<!-- <div style="width:50%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/PmAjqmm4beKervYzFr" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+<script src="https://kit.fontawesome.com/7d3a08d247.js" crossorigin="anonymous"></script>
+
+</html>
