@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset default styles */
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px;
+}
+
+.blog-posts {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.blog-posts article {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.blog-posts h2 {
+  font-size: 24px;
+}
+
+.blog-posts .post-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.blog-posts .read-more {
+  display: inline-block;
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-posts">
+      <article>
+        <h2>Post Title 1</h2>
+        <p class="post-meta">Published on June 1, 2023 by John Doe</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio nibh, vel gravida quam pharetra ac.</p>
+        <a href="#" class="read-more">Read more</a>
+      </article>
+
+      <article>
+        <h2>Post Title 2</h2>
+        <p class="post-meta">Published on May 25, 2023 by Jane Smith</p>
+        <p>Etiam volutpat porta quam eget venenatis. Morbi quis dapibus mauris, vel vestibulum dolor.</p>
+        <a href="#" class="read-more">Read more</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

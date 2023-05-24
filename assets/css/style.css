@@ -2080,14 +2080,37 @@ section {
 } */
 
 /* my custom css */
-.laptop-version img{
+/* .laptop-version {
   width: 200px;
   height: 200px;
   border-style:solid;
-  border-width: 10px;
+  border-width: 1px;
   border-radius: 50%;
   border-color: white;
+  font-size: 2px;
+} */
+.offer hr{
+  width: 12%;
+  color: yellow;
+  margin-left: 1%;
 }
+.zoom .offer{
+  font-size: 15px;
+  padding: 20px;
+  text-align: justify;
+min-height: 100%;
+transition: transform .2s;
+box-shadow: 2px 2px 2px whitesmoke;
+}
+.zoom .offer p{
+  margin-top: 5%;
+}
+.zoom:hover .offer{
+  transform: scale(1.05);
+}
+
+
+
 .laptop-version{
   cursor: pointer;
 }
