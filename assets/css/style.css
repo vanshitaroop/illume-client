@@ -2123,6 +2123,39 @@ border-radius: 10px 2px 10px 2px;
 .dropdown a{
   text-decoration: none;
 }
+.blogpost h2{
+  font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+ 
+    color: #024893;
+}
+.blogpost .nav-tabs{
+  border: none;
+}
+.blogpost .nav-item{
+  background-color: #886A47;
+width: 120px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.blogpost .nav-item .nav-link{
+  color: white;
+}
+.blogpost .nav-item .active{
+  color: black;
+  background-color: white;
+  border: 2px solid #886A47 ;
+ 
+}
+.blogpost .tab-content .tab-pane{
+  margin: 0 10%;
+}
 @media screen and (max-width:600px) {
   .laptops-res{
       display: none;
