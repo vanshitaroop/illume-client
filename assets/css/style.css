@@ -2089,10 +2089,13 @@ section {
   border-color: white;
   font-size: 2px;
 } */
+
 .offer hr{
   width: 12%;
-  color: yellow;
+  color: #FCD13A;
+  height: 2px;
   margin-left: 1%;
+  background-color:#cea71a ;
 }
 .zoom .offer{
   font-size: 15px;
@@ -2100,13 +2103,16 @@ section {
   text-align: justify;
 min-height: 100%;
 transition: transform .2s;
-box-shadow: 2px 2px 2px whitesmoke;
+box-shadow: rgb(255, 255, 255) 0px 22px 15px -20px;
+border-radius: 10px 2px 10px 2px;
 }
+
 .zoom .offer p{
   margin-top: 5%;
 }
 .zoom:hover .offer{
   transform: scale(1.05);
+  transition: .3s;
 }
 
 
