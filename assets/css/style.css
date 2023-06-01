@@ -1127,6 +1127,7 @@ section {
 
 .cta .section-title{
   transform: translateX(-300px);
+
 }
 
 .cta h3 {
@@ -1144,6 +1145,7 @@ section {
 .cta .container .row .col .read:hover{
   background-color: #ffffff;
   transition: .4s;
+  transform: scale(1.1); 
 }
 .cta .container .col-4{
 

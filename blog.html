@@ -1,134 +1,5 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Homepage</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Reset default styles */
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 10px 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  margin: 20px;
-}
-
-.blog-posts {
-  display: grid;
-  grid-gap: 20px;
-}
-
-.blog-posts article {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.blog-posts h2 {
-  font-size: 24px;
-}
-
-.blog-posts .post-meta {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.blog-posts .read-more {
-  display: inline-block;
-  color: #333;
-  background-color: #f2f2f2;
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 3px;
-  margin-top: 10px;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="blog-posts">
-      <article>
-        <h2>Post Title 1</h2>
-        <p class="post-meta">Published on June 1, 2023 by John Doe</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend odio nibh, vel gravida quam pharetra ac.</p>
-        <a href="#" class="read-more">Read more</a>
-      </article>
-
-      <article>
-        <h2>Post Title 2</h2>
-        <p class="post-meta">Published on May 25, 2023 by Jane Smith</p>
-        <p>Etiam volutpat porta quam eget venenatis. Morbi quis dapibus mauris, vel vestibulum dolor.</p>
-        <a href="#" class="read-more">Read more</a>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 My Blog. All rights reserved.</p>
-  </footer>
-</body>
-
-</html> -->
-
-
-<html>
 
 <head>
   <meta charset="UTF-8">
@@ -151,18 +22,10 @@ footer {
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
-
-<body>
+  <link href="assets/css/style.css" rel="stylesheet">\
+  
   <style>
-    /*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-    /**
-* Desktop Navigation 
-*/
-    .navbar {
+   .navbar {
       padding: 0;
     }
 
@@ -400,82 +263,6 @@ footer {
       display: block;
     }
 
-    /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-    #header {
-      transition: all 0.5s;
-      z-index: 997;
-      padding: 15px 0;
-    }
-
-    #header.header-scrolled,
-    #header.header-inner-pages {
-      background: #024893
-    }
-
-    #header .logo {
-      font-size: 30px;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    #header .logo a {
-      color: #fff;
-    }
-
-    #header .logo img {
-      max-height: 40px;
-    }
-  </style>
-  <header id="header" class="fixed-top " style="background-color: #143774;">
-    <div class="container d-flex align-items-center">
-
-      <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
-
-      <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt=""
-          class="img-fluid"></a>
-
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li class="dropdown"><a href="service.html"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="service.html">Startups and emerging businesses</a></li>
-                  <li><a href="s2.html">Established business</a></li>
-                  <li><a href="s3.html">Investment funds</a></li>
-                  <li><a href="s4.html">Families and HNIs</a></li>
-                  <li><a href="s5.html">Overseas business</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link scrollto" href="/about.html">About</a></li>
-              <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
-                  href="https://api.whatsapp.com/send?phone=918369850587&text=Hello" target="_blank">Connect</a></button>
-              <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <!-- header starts -->
-
-  <!-- header ends -->
-  <style>
-    /* Typography */
-    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
-
-    body {
-      margin: 0;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 1.125rem;
-      font-weight: 300;
-    }
-
     h1,
     h2,
     h3 {
@@ -675,382 +462,43 @@ footer {
       margin-top: 16px;
     }
 
-    /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-    #footer {
-      font-size: 14px;
-      background: #024893;
-    }
 
-    #footer .footer-newsletter {
-      padding: 50px 0;
-      background: #f3f5fa;
-      text-align: center;
-      font-size: 15px;
-      color: #444444;
-    }
-
-    #footer .footer-newsletter h4 {
-      font-size: 24px;
-      margin: 0 0 20px 0;
-      padding: 0;
-      line-height: 1;
-      font-weight: 600;
-      color: #024893;
-    }
-
-    #footer .footer-newsletter form {
-      margin-top: 30px;
-      background: #fff;
-      padding: 6px 10px;
-      position: relative;
-      border-radius: 50px;
-      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
-      text-align: left;
-    }
-
-    #footer .footer-newsletter form input[type=email] {
-      border: 0;
-      padding: 4px 8px;
-      width: calc(100% - 100px);
-    }
-
-    #footer .footer-newsletter form input[type=submit] {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      border: 0;
-      background: none;
-      font-size: 16px;
-      padding: 0 20px;
-      background: #FCD13A;
-      color: #fff;
-      transition: 0.3s;
-      border-radius: 50px;
-      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    #footer .footer-newsletter form input[type=submit]:hover {
-      background: #209dd8;
-    }
-
-    #footer .footer-top {
-      padding: 60px 0 30px 0;
-      background: #fff;
-    }
-
-    #footer .footer-top .footer-contact {
-      margin-bottom: 30px;
-    }
-
-    #footer .footer-top .footer-contact h3 {
-      font-size: 28px;
-      margin: 0 0 10px 0;
-      padding: 2px 0 2px 0;
-      line-height: 1;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #024893;
-    }
-
-    #footer .footer-top .footer-contact p {
-      font-size: 14px;
-      line-height: 24px;
-      margin-bottom: 0;
-      font-family: "Jost", sans-serif;
-      color: #5e5e5e;
-    }
-
-    #footer .footer-top h4 {
-      font-size: 16px;
-      font-weight: bold;
-      color: #024893;
-      position: relative;
-      padding-bottom: 12px;
-    }
-
-    #footer .footer-top .footer-links {
-      margin-bottom: 30px;
-    }
-
-    #footer .footer-top .footer-links ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #footer .footer-top .footer-links ul i {
-      padding-right: 2px;
-      color: #FCD13A;
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    #footer .footer-top .footer-links ul li {
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    #footer .footer-top .footer-links ul li:first-child {
-      padding-top: 0;
-    }
-
-    #footer .footer-top .footer-links ul a {
-      color: #777777;
-      transition: 0.3s;
-      display: inline-block;
-      line-height: 1;
-    }
-
-    #footer .footer-top .footer-links ul a:hover {
-      text-decoration: none;
-      color: #FCD13A;
-    }
-
-    #footer .footer-top .social-links a {
-      font-size: 18px;
-      display: inline-block;
-      background: #FCD13A;
-      color: #fff;
-      line-height: 1;
-      padding: 8px 0;
-      margin-right: 4px;
-      border-radius: 50%;
-      text-align: center;
-      width: 36px;
-      height: 36px;
-      transition: 0.3s;
-    }
-
-    #footer .footer-top .social-links a:hover {
-      background: #209dd8;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    #footer .footer-bottom {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      color: #fff;
-    }
-
-    #footer .copyright {
-      float: left;
-    }
-
-    #footer .credits {
-      float: right;
-      font-size: 13px;
-    }
-
-    #footer .credits a {
-      transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      #footer .footer-bottom {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-
-      #footer .copyright,
-      #footer .credits {
-        text-align: center;
-        float: none;
-      }
-
-      #footer .credits {
-        padding-top: 4px;
-      }
-
-
-    }
   </style>
-  <!-- container starts -->
-  <!-- ======= Why Us Section ======= -->
-  <section id="aboutt" class="why-us section-bg">
-    <div class="container-fluid" data-aos="fade-up">
+</head>
 
-      <div class="row">
+<body>
 
-        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+  <header id="header" class="fixed-top " style="background-color: #143774;">
+    <div class="container d-flex align-items-center">
 
-          <div class="content">
-            <h3><strong>About Us</strong></h3>
-            <p>
-              Illume Advisory is a multi-disciplinary professional service organization with expertise in the areas of
-              accounting, taxation, regulatory, transactions and M&A, corporate finance, and business advisory.
-            </p>
-          </div>
+      <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
 
-          <div class="accordion-list">
+      <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt=""
+          class="img-fluid"></a>
+
+          <nav id="navbar" class="navbar">
             <ul>
-              <li>
-                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>
-                  Our diverse capabilities to navigate complex and strategic aspects uniquely position us to provide
-                  end-to-end services, <i class="bx bx-chevron-down icon-show"></i><i
-                    class="bx bx-chevron-up icon-close"></i></a>
-                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                  <p>
-                    from conceptualizing to planning to implementation. Our experience enables us to provide research
-                    based, holistic and customised approach to issues at hand.
-                  </p>
-                </div>
+              <li class="dropdown"><a href="service.html"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="service.html">Startups and emerging businesses</a></li>
+                  <li><a href="s2.html">Established business</a></li>
+                  <li><a href="s3.html">Investment funds</a></li>
+                  <li><a href="s4.html">Families and HNIs</a></li>
+                  <li><a href="s5.html">Overseas business</a></li>
+                </ul>
               </li>
-
-              <li>
-                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
-
-                  True to our name, we are passionate in solving clients’ issues <i
-                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                  <p>
-                    and meeting their requirements with the right blend of technical knowledge, industry expertise,
-                    research and business acumen.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
-                  Keeping the clients at the core of all the things we do, we endeavour to foster strong
-                  relationships<i class="bx bx-chevron-down icon-show"></i><i
-                    class="bx bx-chevron-up icon-close"></i></a>
-                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                  <p>
-                    based on confidence, integrity, and trust which enables us to become their sounding board
-                  </p>
-                </div>
-              </li>
-
+              <li><a class="nav-link scrollto" href="/about.html">About</a></li>
+              <li><a class="nav-link scrollto" href="/blog.html">Blog</a></li>
+              <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                  href="https://api.whatsapp.com/send?phone=918369850587&text=Hello" target="_blank">Connect</a></button>
+              <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
             </ul>
-          </div>
-
-        </div>
-
-        <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-          style='background-image: url("assets/img/Valueprop.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
-        </div>
-      </div>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
 
     </div>
-  </section><!-- End Why Us Section -->
-
- 
-  <!-- ======= Team Section ======= -->
-  <section id="team" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Core Team</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
-      </div>
-      <!-- <class class="row" style="max-width:100%;height:auto; font-size:10vw"> -->
-      <class class="row" >
-        
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="member d-flex align-items-start">
-              <a href="core1.html" style="color: inherit; text-decoration: none;" >
-                <div class="pic"><img src="assets/img/team/Picture1.jpg" class="img-fluid" alt="todo"></div>
-              </a>
-              <div class="member-info">
-                <h4>Yashesh Ashar
-                </h4>
-                <span>Chartered Accountant
-                </span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <!-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        
-
-
-        
-          <div class="col-lg-6 mt-4 " data-aos="zoom-in" data-aos-delay="200">
-            <div class="member d-flex align-items-start">
-              <a href="core2.html" style="color: inherit; text-decoration: none;" >
-              <div class="pic"><img src="assets/img/team/Picture2.jpg" class="img-fluid" alt="todo"></div>
-              </a>
-              <div class="member-info">
-                <h4>Raashi Shah
-                </h4>
-                <span>Chartered Accountant, LLB, MBA in Finance
-                </span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <!-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        
-
-        
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="member d-flex align-items-start">
-              <!-- <a href="core3.html" style="color: inherit; text-decoration: none;"> -->
-              <a href="core3.html" style="color: inherit; text-decoration: none;" >
-                <div class="pic"><img src="assets/img/team/Picture3.jpg" class="img-fluid" alt="todo"></div>
-              </a>
-              <div class="member-info">
-                <h4>Sanjay Dadhich
-                </h4>
-                <span>Associate Partner
-                </span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <!-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        
-
-        
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="member d-flex align-items-start">
-            <a href="core4.html" style="color: inherit; text-decoration: none;" >  
-              <div class="pic"><img src="assets/img/team/Picture4.jpg" class="img-fluid" alt="todo"></div>
-            </a>
-              <div class="member-info">
-                <h4>Ravi Nandan Sinha
-                </h4>
-                <span>Director of Development, <br> MSME Business Forum
-                  Strategic Advisor to Illume Advisory
-                  </span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <!-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> -->
-              </div>
-            </div>
-          </div>
-        </class>
-      </a>
-      </div>
-    </div>
-  </section>
-  <!-- <section class="headerr" style="margin-top: 60px;">
+  </header><!-- End Header -->
+  <section class="headerr" style="margin-top: 60px;">
     <div class='container '>
       <div class='site-title'>
         <h1>Blogs by illume</h1>
@@ -1149,17 +597,7 @@ footer {
       class="float" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
     </a>
-  </div> -->
-  <!-- container ends -->
-  <!-- End Team Section -->
-  <!-- footer starts -->
-  <footer>
-    <p><strong>illumee</strong></p>
-    <p>Copyright 2023, <a>Owner name</a></p>
-
-  </footer>
-  <!-- footer ends -->
-  <!-- Vendor JS Files -->
+  </div>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
