@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@600&display=swap');
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -1127,7 +1131,25 @@ section {
   font-size: 28px;
   font-weight: 700;
 }
+.cta .container .row .col .read{
+  background-color: #FFD700;
+  color: black; border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.cta .container .col-4{
 
+  background-color: #FFD700;
+padding: 20px 10px;
+  width: 300px;
+  margin: 10px;
+}
+
+
+.cta .container .col-4 h4{
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
 .cta p {
   color: #fff;
 }
@@ -1545,6 +1567,7 @@ section {
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
+  
 }
 
 @media (max-width: 420px) {
@@ -1552,6 +1575,23 @@ section {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
+  .cta .container .col-4{
+
+    
+    width: 175px;
+   
+  }
+  
+}
+@media (max-width: 400px) {
+ 
+  .cta .container .col-4{
+
+    
+    width: 160px;
+   
+  }
+  
 }
 
 /*--------------------------------------------------------------
