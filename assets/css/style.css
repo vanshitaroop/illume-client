@@ -10,6 +10,7 @@
 --------------------------------------------------------------*/
 
 
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair:wght@600&display=swap');
 
 body {
@@ -551,13 +552,14 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 35px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
   color: #024893;
+  font-family: 'Playfair', serif;
 }
 
 .section-title h2::before {
