@@ -1125,6 +1125,9 @@ section {
 # Cta
 --------------------------------------------------------------*/
 
+.cta .section-title{
+  transform: translateX(-300px);
+}
 
 .cta h3 {
   color: #fff;
@@ -1136,22 +1139,48 @@ section {
   color: black; border: none;
   padding: 10px 20px;
   font-size: 15px;
+  transition: .4s;
+}
+.cta .container .row .col .read:hover{
+  background-color: #ffffff;
+  transition: .4s;
 }
 .cta .container .col-4{
 
   background-color: #FFD700;
-padding: 20px 10px;
+  padding: 20px 10px;
   width: 300px;
   margin: 10px;
+  transition: .4s;
+  border-radius: 2px;
+  height: 100px;
+
+}
+.cta .container .col-4:hover{
+
+  background-color: white;
+  transition: .4s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ 
 }
 
 
 .cta .container .col-4 h4{
   color: rgb(0, 0, 0);
   font-size: 20px;
+ 
+
+
 }
+
 .cta p {
   color: #fff;
+}
+#Last{
+  margin-top: 20px;
+}
+#Second{
+  margin-top: 20px;
 }
 
 .cta .cta-btn {

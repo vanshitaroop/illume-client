@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -123,6 +123,1055 @@ footer {
   <footer>
     <p>&copy; 2023 My Blog. All rights reserved.</p>
   </footer>
+</body>
+
+</html> -->
+
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicons -->
+  <link href="assets/img/Illumeinitial.png" style="width: 100%;" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+    /**
+* Desktop Navigation 
+*/
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 10px 30px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+
+    .navbar a i,
+    .navbar a:focus i {
+      font-size: 12px;
+      line-height: 0;
+      margin-left: 5px;
+    }
+
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
+      color: #FCD13A;
+    }
+
+    .navbar .getstarted,
+    .navbar .getstarted:focus {
+      padding: 8px 20px;
+      margin-left: 30px;
+      border-radius: 50px;
+      color: #fff;
+      font-size: 14px;
+      border: 2px solid #FCD13A;
+      font-weight: 600;
+    }
+
+    .navbar .getstarted:hover,
+    .navbar .getstarted:focus:hover {
+      color: #fff;
+      background: #31a9e1;
+    }
+
+    .navbar .dropdown ul {
+      display: block;
+      position: absolute;
+      left: 14px;
+      top: calc(100% + 30px);
+      margin: 0;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+
+    .navbar .dropdown ul li {
+      min-width: 200px;
+    }
+
+    .navbar .dropdown ul a {
+      padding: 10px 20px;
+      font-size: 14px;
+      text-transform: none;
+      font-weight: 500;
+      color: #0c3c53;
+    }
+
+    .navbar .dropdown ul a i {
+      font-size: 12px;
+    }
+
+    .navbar .dropdown ul a:hover,
+    .navbar .dropdown ul .active:hover,
+    .navbar .dropdown ul li:hover>a {
+      color: #FCD13A;
+    }
+
+    .navbar .dropdown:hover>ul {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+    }
+
+    .navbar .dropdown .dropdown ul {
+      top: 0;
+      left: calc(100% - 30px);
+      visibility: hidden;
+    }
+
+    .navbar .dropdown .dropdown:hover>ul {
+      opacity: 1;
+      top: 0;
+      left: 100%;
+      visibility: visible;
+    }
+
+    @media (max-width: 1366px) {
+      .navbar .dropdown .dropdown ul {
+        left: -90%;
+      }
+
+      .navbar .dropdown .dropdown:hover>ul {
+        left: -100%;
+      }
+    }
+
+    /**
+* Mobile Navigation 
+*/
+    .mobile-nav-toggle {
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 0.5s;
+    }
+
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+        display: none;
+      }
+    }
+
+    .navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(40, 58, 90, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .navbar-mobile .mobile-nav-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .navbar-mobile ul {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px 0;
+      border-radius: 10px;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+
+    .navbar-mobile a,
+    .navbar-mobile a:focus {
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #024893;
+    }
+
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover>a {
+      color: #FCD13A;
+    }
+
+    .navbar-mobile .getstarted,
+    .navbar-mobile .getstarted:focus {
+      margin: 15px;
+      color: #024893;
+    }
+
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 20px;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    .navbar-mobile .dropdown ul li {
+      min-width: 200px;
+    }
+
+    .navbar-mobile .dropdown ul a {
+      padding: 10px 20px;
+    }
+
+    .navbar-mobile .dropdown ul a i {
+      font-size: 12px;
+    }
+
+    .navbar-mobile .dropdown ul a:hover,
+    .navbar-mobile .dropdown ul .active:hover,
+    .navbar-mobile .dropdown ul li:hover>a {
+      color: #FCD13A;
+    }
+
+    .navbar-mobile .dropdown>.dropdown-active {
+      display: block;
+    }
+
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+    #header {
+      transition: all 0.5s;
+      z-index: 997;
+      padding: 15px 0;
+    }
+
+    #header.header-scrolled,
+    #header.header-inner-pages {
+      background: #024893
+    }
+
+    #header .logo {
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    #header .logo a {
+      color: #fff;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+    }
+  </style>
+  <header id="header" class="fixed-top " style="background-color: #143774;">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
+
+      <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt=""
+          class="img-fluid"></a>
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li class="dropdown"><a href="service.html"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="service.html">Startups and emerging businesses</a></li>
+                  <li><a href="s2.html">Established business</a></li>
+                  <li><a href="s3.html">Investment funds</a></li>
+                  <li><a href="s4.html">Families and HNIs</a></li>
+                  <li><a href="s5.html">Overseas business</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="/about.html">About</a></li>
+              <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                  href="https://api.whatsapp.com/send?phone=918369850587&text=Hello" target="_blank">Connect</a></button>
+              <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <!-- header starts -->
+
+  <!-- header ends -->
+  <style>
+    /* Typography */
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 300;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      color: #143774;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    a {
+      color: #1792d2;
+    }
+
+    a:hover,
+    a:focus {
+      color: #143774;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 0;
+      color: #1792d2;
+      letter-spacing: 0.05em;
+      font-family: 'Ubuntu Bold', sans-serif;
+    }
+
+    .article-title {
+      font-size: 1.5rem;
+    }
+
+    .article-read-more,
+    .article-info {
+      font-size: .875rem;
+    }
+
+    .article-read-more {
+      color: #1792d2;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .article-read-more:hover,
+    .article-read-more:focus {
+      color: #143774;
+      text-decoration: underline;
+    }
+
+    .article-info {
+      margin: 2em 0;
+    }
+
+    .headerr {
+      padding: 2em 0;
+      text-align: center;
+      background: #f0f8ff;
+      font-family: sans-serif;
+      margin-bottom: 3em;
+    }
+
+    .container-flex {
+      max-width: 70vw;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+    }
+
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    main {
+      max-width: 75%;
+    }
+
+    .article-body {
+      width: 100%;
+      text-align: justify;
+    }
+
+    .sidebar {
+      max-width: 23%;
+    }
+
+    footer {
+      background: #143774;
+      color: white;
+      text-align: center;
+      padding: 3em 0;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    @media (max-width:1050px) {
+      .container-flex {
+        flex-direction: column;
+      }
+
+      .site-title,
+      .subtitle {
+        width: 100%;
+      }
+
+      main {
+        max-width: 100%;
+      }
+
+      .sidebar {
+        max-width: 100%;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+      nav ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav li {
+        margin: 0.5em 0;
+      }
+    }
+
+    /* articles */
+    .article-featured {
+      border-bottom: #707070 1px solid;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+    }
+
+    .article-recent {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em;
+    }
+
+    .article-recent-main {
+      order: 2;
+    }
+
+    .article-recent-secondary {
+      order: 1;
+    }
+
+    @media (min-width: 675px) {
+      .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .article-recent-main {
+        width: 68%;
+      }
+
+      .article-recent-secondary {
+        width: 30%;
+      }
+    }
+
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 80px;
+      right: 10px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+
+    .my-float {
+      margin-top: 16px;
+    }
+
+    /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+    #footer {
+      font-size: 14px;
+      background: #024893;
+    }
+
+    #footer .footer-newsletter {
+      padding: 50px 0;
+      background: #f3f5fa;
+      text-align: center;
+      font-size: 15px;
+      color: #444444;
+    }
+
+    #footer .footer-newsletter h4 {
+      font-size: 24px;
+      margin: 0 0 20px 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 600;
+      color: #024893;
+    }
+
+    #footer .footer-newsletter form {
+      margin-top: 30px;
+      background: #fff;
+      padding: 6px 10px;
+      position: relative;
+      border-radius: 50px;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+      text-align: left;
+    }
+
+    #footer .footer-newsletter form input[type=email] {
+      border: 0;
+      padding: 4px 8px;
+      width: calc(100% - 100px);
+    }
+
+    #footer .footer-newsletter form input[type=submit] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 0;
+      background: none;
+      font-size: 16px;
+      padding: 0 20px;
+      background: #FCD13A;
+      color: #fff;
+      transition: 0.3s;
+      border-radius: 50px;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #footer .footer-newsletter form input[type=submit]:hover {
+      background: #209dd8;
+    }
+
+    #footer .footer-top {
+      padding: 60px 0 30px 0;
+      background: #fff;
+    }
+
+    #footer .footer-top .footer-contact {
+      margin-bottom: 30px;
+    }
+
+    #footer .footer-top .footer-contact h3 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      padding: 2px 0 2px 0;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #024893;
+    }
+
+    #footer .footer-top .footer-contact p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+      font-family: "Jost", sans-serif;
+      color: #5e5e5e;
+    }
+
+    #footer .footer-top h4 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #024893;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    #footer .footer-top .footer-links {
+      margin-bottom: 30px;
+    }
+
+    #footer .footer-top .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #footer .footer-top .footer-links ul i {
+      padding-right: 2px;
+      color: #FCD13A;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    #footer .footer-top .footer-links ul li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #footer .footer-top .footer-links ul li:first-child {
+      padding-top: 0;
+    }
+
+    #footer .footer-top .footer-links ul a {
+      color: #777777;
+      transition: 0.3s;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    #footer .footer-top .footer-links ul a:hover {
+      text-decoration: none;
+      color: #FCD13A;
+    }
+
+    #footer .footer-top .social-links a {
+      font-size: 18px;
+      display: inline-block;
+      background: #FCD13A;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+
+    #footer .footer-top .social-links a:hover {
+      background: #209dd8;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #footer .footer-bottom {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      color: #fff;
+    }
+
+    #footer .copyright {
+      float: left;
+    }
+
+    #footer .credits {
+      float: right;
+      font-size: 13px;
+    }
+
+    #footer .credits a {
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      #footer .footer-bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      #footer .copyright,
+      #footer .credits {
+        text-align: center;
+        float: none;
+      }
+
+      #footer .credits {
+        padding-top: 4px;
+      }
+
+
+    }
+  </style>
+  <!-- container starts -->
+  <!-- ======= Why Us Section ======= -->
+  <section id="aboutt" class="why-us section-bg">
+    <div class="container-fluid" data-aos="fade-up">
+
+      <div class="row">
+
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+          <div class="content">
+            <h3><strong>About Us</strong></h3>
+            <p>
+              Illume Advisory is a multi-disciplinary professional service organization with expertise in the areas of
+              accounting, taxation, regulatory, transactions and M&A, corporate finance, and business advisory.
+            </p>
+          </div>
+
+          <div class="accordion-list">
+            <ul>
+              <li>
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>
+                  Our diverse capabilities to navigate complex and strategic aspects uniquely position us to provide
+                  end-to-end services, <i class="bx bx-chevron-down icon-show"></i><i
+                    class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                  <p>
+                    from conceptualizing to planning to implementation. Our experience enables us to provide research
+                    based, holistic and customised approach to issues at hand.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>
+
+                  True to our name, we are passionate in solving clients’ issues <i
+                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    and meeting their requirements with the right blend of technical knowledge, industry expertise,
+                    research and business acumen.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                  Keeping the clients at the core of all the things we do, we endeavour to foster strong
+                  relationships<i class="bx bx-chevron-down icon-show"></i><i
+                    class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    based on confidence, integrity, and trust which enables us to become their sounding board
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+          style='background-image: url("assets/img/Valueprop.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Why Us Section -->
+
+ 
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Core Team</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p>
+      </div>
+      <!-- <class class="row" style="max-width:100%;height:auto; font-size:10vw"> -->
+      <class class="row" >
+        
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <a href="core1.html" style="color: inherit; text-decoration: none;" >
+                <div class="pic"><img src="assets/img/team/Picture1.jpg" class="img-fluid" alt="todo"></div>
+              </a>
+              <div class="member-info">
+                <h4>Yashesh Ashar
+                </h4>
+                <span>Chartered Accountant
+                </span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        
+
+
+        
+          <div class="col-lg-6 mt-4 " data-aos="zoom-in" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <a href="core2.html" style="color: inherit; text-decoration: none;" >
+              <div class="pic"><img src="assets/img/team/Picture2.jpg" class="img-fluid" alt="todo"></div>
+              </a>
+              <div class="member-info">
+                <h4>Raashi Shah
+                </h4>
+                <span>Chartered Accountant, LLB, MBA in Finance
+                </span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        
+
+        
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member d-flex align-items-start">
+              <!-- <a href="core3.html" style="color: inherit; text-decoration: none;"> -->
+              <a href="core3.html" style="color: inherit; text-decoration: none;" >
+                <div class="pic"><img src="assets/img/team/Picture3.jpg" class="img-fluid" alt="todo"></div>
+              </a>
+              <div class="member-info">
+                <h4>Sanjay Dadhich
+                </h4>
+                <span>Associate Partner
+                </span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        
+
+        
+          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member d-flex align-items-start">
+            <a href="core4.html" style="color: inherit; text-decoration: none;" >  
+              <div class="pic"><img src="assets/img/team/Picture4.jpg" class="img-fluid" alt="todo"></div>
+            </a>
+              <div class="member-info">
+                <h4>Ravi Nandan Sinha
+                </h4>
+                <span>Director of Development, <br> MSME Business Forum
+                  Strategic Advisor to Illume Advisory
+                  </span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <!-- <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </class>
+      </a>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="headerr" style="margin-top: 60px;">
+    <div class='container '>
+      <div class='site-title'>
+        <h1>Blogs by illume</h1>
+        <p class='subtitle'>A blog exploring minimalism in life.</p>
+      </div>
+    </div>
+  </section>
+  <div class="container container-flex">
+    <main role="main">
+      <article class="article-featured"  data-aos="fade-right">
+        <h2 class="article-title">Heading1</h2>
+        <img
+          src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/life.jpg"
+          alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+        <p class="article-info">July 23, 2019 | 3 comments</p>
+        <p class="article-body">Life can get complicated really quickly, but it doesn't have to be! There are many ways
+          to simplify your life, a few of which we've explored in the past. This week we're taking a bit of a approach
+          though, in how you can find simplicity in the life you already living.</p>
+        <a href="#" class="article-read-more">CONTINUE READING</a>
+      </article>
+
+      <article class="article-recent"  data-aos="fade-right">
+        <div class="article-recent-main">
+          <h2 class="article-title">Heading 2</h2>
+          <p class="article-body">Food is a very important part of everyone's life. If you want to be healthy, you have
+            to eat healthy. One of the easiest ways to do that is to keep your cooking nice and simple.</p>
+          <a href="#" class="article-read-more">CONTINUE READING</a>
+        </div>
+        <div class="article-recent-secondary">
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/food.jpg"
+            alt="two dumplings on a wood plate with chopsticks" class="article-image">
+          <p class="article-info">July 19, 2019 | 3 comments</p>
+        </div>
+      </article>
+
+      <article class="article-recent"  data-aos="fade-right">
+        <div class="article-recent-main">
+          <h2 class="article-title">Heading 3 </h2>
+          <p class="article-body">Work is often a major source of stress. People get frustrated, it ruins their
+            relationship with others and it leads to burnout. By keeping your work life as simple as possible, it will
+            help balance everything out.</p>
+          <a href="#" class="article-read-more">CONTINUE READING</a>
+        </div>
+        <div class="article-recent-secondary">
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/work.jpg"
+            alt="a chair white chair at a white desk on a white wall" class="article-image">
+          <p class="article-info">July 12, 2019 | 3 comments</p>
+        </div>
+      </article>
+
+      <article class="article-recent"  data-aos="fade-right">
+        <div class="article-recent-main">
+          <h2 class="article-title">Heading 4</h2>
+          <p class="article-body">A home isn't a home until you've decorated a little. People either don't decorate, or
+            they go overboard and it doesn't have the impact they were hoping for. Staying simple will help draw the eye
+            where you want it to and make things pop like never before.</p>
+          <a href="#" class="article-read-more">CONTINUE READING</a>
+        </div>
+        <div class="article-recent-secondary">
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/work.jpg"
+            alt="a green plant in a clear, round vase with water in it" class="article-image">
+          <p class="article-info">July 3, 2019 | 3 comments</p>
+        </div>
+      </article>
+    </main>
+
+    <aside class="sidebar" data-aos="fade-left">
+      <div class="sidebar-widget">
+        <h2 class="widget-title">RECENT POSTS</h2>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">Heading 1</h3>
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/food.jpg"
+            alt="two dumplings on a wood plate with chopsticks" class="widget-image">
+        </div>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">Heading 2</h3>
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/work.jpg"
+            alt="a chair white chair at a white desk on a white wall" class="widget-image">
+        </div>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">Heading 3</h3>
+          <img
+            src="https://raw.githubusercontent.com/kevin-powell/reponsive-web-design-bootcamp/master/Module%202-%20A%20simple%20life/img/deco.jpg"
+            alt="a green plant in a clear, round vase with water in it" class="widget-image">
+        </div>
+      </div>
+
+    </aside>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+918369850587&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+      class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+  </div> -->
+  <!-- container ends -->
+  <!-- End Team Section -->
+  <!-- footer starts -->
+  <footer>
+    <p><strong>illumee</strong></p>
+    <p>Copyright 2023, <a>Owner name</a></p>
+
+  </footer>
+  <!-- footer ends -->
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- <div style="width:50%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/PmAjqmm4beKervYzFr" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+  <script src="https://kit.fontawesome.com/7d3a08d247.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
