@@ -1127,10 +1127,10 @@ section {
 # Cta
 --------------------------------------------------------------*/
 
-.cta .section-title{
+/* .cta .section-title{
   transform: translateX(-300px);
 
-}
+} */
 
 .cta h3 {
   color: #fff;
