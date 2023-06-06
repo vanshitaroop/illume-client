@@ -645,6 +645,7 @@ section {
   color: #FCD13A;
   line-height: 1;
 }
+
 /* same css for segment section  start */
 .segmentt ul {
   list-style: none;
@@ -669,10 +670,11 @@ section {
   color: #FCD13A;
   line-height: 1;
 }
+
 /* same css for segment section end */
 /* same css for service section start */
 
-.services ul{
+.services ul {
   list-style: none;
 }
 
@@ -712,7 +714,8 @@ section {
   margin-top: 6px;
   border: 2px solid #FCD13A;
 }
- .icon-box .btn-learn-more {
+
+.icon-box .btn-learn-more {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -843,12 +846,13 @@ section {
 }
 
 @media (max-width: 1024px) {
+
   .why-us .content,
   .why-us .accordion-list {
     padding-left: 0;
     padding-right: 0;
   }
- 
+
 }
 
 @media (max-width: 992px) {
@@ -869,22 +873,26 @@ section {
   .why-us .img {
     min-height: 200px;
   }
-  
+
 }
+
 @media screen and (min-width: 300px) {
-  .afillationss{
+  .afillationss {
     padding-left: 150px;
   }
-  .img-A{
-    width:200px;
+
+  .img-A {
+    width: 200px;
   }
 }
-@media screen and (max-width:300px){
-  .afillationss{
+
+@media screen and (max-width:300px) {
+  .afillationss {
     padding-left: 10px;
   }
-  .img-A{
-    width:200px;
+
+  .img-A {
+    width: 200px;
   }
 }
 
@@ -892,49 +900,49 @@ section {
   padding: 60px 100px 0 100px;
 }
 
-  .content h3 {
+.content h3 {
   font-weight: 400;
   font-size: 34px;
   color: #024893;
 }
 
-  .content h4 {
+.content h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
 }
 
-  .content p {
+.content p {
   font-size: 15px;
   color: #848484;
 }
 
-  .img {
+.img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-  .accordion-list {
+.accordion-list {
   padding: 0 100px 60px 100px;
 }
 
-  .accordion-list ul {
+.accordion-list ul {
   padding: 0;
   list-style: none;
 }
 
-  .accordion-list li+li {
+.accordion-list li+li {
   margin-top: 15px;
 }
 
-  .accordion-list li {
+.accordion-list li {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
 }
 
-  .accordion-list a {
+.accordion-list a {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -946,73 +954,74 @@ section {
   cursor: pointer;
 }
 
-  .accordion-list span {
+.accordion-list span {
   color: #FCD13A;
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
 }
 
-  .accordion-list i {
+.accordion-list i {
   font-size: 24px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-  .accordion-list p {
+.accordion-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
 }
 
-  .accordion-list .icon-show {
+.accordion-list .icon-show {
   display: none;
 }
 
-  .accordion-list a.collapsed {
+.accordion-list a.collapsed {
   color: #343a40;
 }
 
-  .accordion-list a.collapsed:hover {
+.accordion-list a.collapsed:hover {
   color: #FCD13A;
 }
 
-  .accordion-list a.collapsed .icon-show {
+.accordion-list a.collapsed .icon-show {
   display: inline-block;
 }
 
-  .accordion-list a.collapsed .icon-close {
+.accordion-list a.collapsed .icon-close {
   display: none;
 }
 
 @media (max-width: 1024px) {
-    .content,
-    .accordion-list {
+
+  .content,
+  .accordion-list {
     padding-left: 0;
     padding-right: 0;
   }
- 
+
 }
 
 @media (max-width: 992px) {
-    .img {
+  .img {
     min-height: 400px;
   }
 
-    .content {
+  .content {
     padding-top: 30px;
   }
 
-    .accordion-list {
+  .accordion-list {
     padding-bottom: 30px;
   }
 }
 
 @media (max-width: 575px) {
-    .img {
+  .img {
     min-height: 200px;
   }
-  
+
 }
 
 /*--------------------------------------------------------------
@@ -1137,19 +1146,23 @@ section {
   font-size: 28px;
   font-weight: 700;
 }
-.cta .container .row .col .read{
+
+.cta .container .row .col .read {
   background-color: #FFD700;
-  color: black; border: none;
+  color: black;
+  border: none;
   padding: 10px 20px;
   font-size: 15px;
   transition: .4s;
 }
-.cta .container .row .col .read:hover{
+
+.cta .container .row .col .read:hover {
   background-color: #ffffff;
   transition: .4s;
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
-.cta .container .col-4{
+
+.cta .container .col-4 {
 
   background-color: #FFD700;
   padding: 20px 10px;
@@ -1162,19 +1175,19 @@ section {
 
 }
 
-.cta .container .col-4:hover{
+.cta .container .col-4:hover {
 
   background-color: white;
   transition: .4s;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
- 
+
 }
 
 
-.cta .container .col-4 h4{
+.cta .container .col-4 h4 {
   color: rgb(0, 0, 0);
   font-size: 20px;
- 
+
 
 
 }
@@ -1182,10 +1195,12 @@ section {
 .cta p {
   color: #fff;
 }
-#Last{
+
+#Last {
   margin-top: 20px;
 }
-#Second{
+
+#Second {
   margin-top: 20px;
 }
 
@@ -1398,6 +1413,7 @@ section {
   width: 180px;
   border-radius: 50%;
 }
+
 .pic {
   overflow: hidden;
   width: 180px;
@@ -1414,8 +1430,8 @@ section {
 
 .team .member .member-info {
   /* padding-left: 30px; */
-    padding-left: auto;
-    text-align: justify;
+  padding-left: auto;
+  text-align: justify;
 }
 
 .team .member h4 {
@@ -1602,7 +1618,7 @@ section {
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
-  
+
 }
 
 @media (max-width: 420px) {
@@ -1610,23 +1626,25 @@ section {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
-  .cta .container .col-4{
 
-    
+  .cta .container .col-4 {
+
+
     width: 175px;
-   
-  }
-  
-}
-@media (max-width: 400px) {
- 
-  .cta .container .col-4{
 
-    
-    width: 160px;
-   
   }
-  
+
+}
+
+@media (max-width: 400px) {
+
+  .cta .container .col-4 {
+
+
+    width: 160px;
+
+  }
+
 }
 
 /*--------------------------------------------------------------
@@ -2146,8 +2164,9 @@ section {
     padding-top: 4px;
   }
 
- 
+
 }
+
 /* @media screen and (min-width: 900px){
   .clients{
 
@@ -2166,42 +2185,45 @@ section {
 } */
 
 
-.offer hr{
+.offer hr {
   width: 12%;
   color: #FCD13A;
   height: 2px;
   margin-left: 1%;
-  background-color:#cea71a ;
+  background-color: #cea71a;
 }
-.zoom .offer{
+
+.zoom .offer {
   font-size: 15px;
   padding: 20px;
   text-align: justify;
-min-height: 100%;
-transition: transform .2s;
-box-shadow: rgb(255, 255, 255) 0px 22px 15px -20px;
-border-radius: 10px 2px 10px 2px;
+  min-height: 100%;
+  transition: transform .2s;
+  box-shadow: rgb(255, 255, 255) 0px 22px 15px -20px;
+  border-radius: 10px 2px 10px 2px;
 }
 
-.zoom .offer p{
+.zoom .offer p {
   margin-top: 5%;
 }
-.zoom:hover .offer{
+
+.zoom:hover .offer {
   transform: scale(1.05);
   transition: .3s;
 }
 
 
 
-.laptop-version{
+.laptop-version {
   cursor: pointer;
 }
-.dropdown a{
+
+.dropdown a {
   text-decoration: none;
 }
 
 /*--------------------- Blogpost section-------------------- */
-.blogpost h2{
+.blogpost h2 {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
@@ -2210,6 +2232,7 @@ border-radius: 10px 2px 10px 2px;
   position: relative;
   color: #024893;
 }
+
 .blogpost h2::before {
   content: "";
   position: absolute;
@@ -2231,45 +2254,66 @@ border-radius: 10px 2px 10px 2px;
   bottom: 0;
   left: calc(50% - 20px);
 }
-.blogpost .nav-tabs{
+
+.blogpost .nav-tabs {
   border: none;
 }
-.blogpost .nav-item{
+
+.blogpost .nav-item {
   background-color: #024893;
-  width: 120px;
+  width: 250px;
   margin: 10px;
   text-align: center;
   font-weight: bold;
 
 }
 
-.blogpost .nav-item .nav-link{
+.blogpost .nav-item .nav-link {
   color: white;
-}
-.blogpost .nav-item .active{
-  color: black;
-  background-color: white;
-  border: 2px solid #024893 ;
- 
-}
-.blogpost .tab-content .tab-pane{
-  margin: 0 10%;
+  font-size: 13px
 }
 
+.blogpost .nav-item .active {
+  color: black;
+  background-color: white;
+  border: 2px solid #024893;
+
+}
+
+
+.tab-content a {
+  text-decoration: none;
+  background-color: #024893;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.blogpost .tab-content .tab-pane {
+  margin: 0 10%;
+}
+ #carouselExampleAutoplaying .card{
+  margin: 50px 50px;
+ }
 @media screen and (max-width:600px) {
-  .laptops-res{
-      display: none;
+  .laptops-res {
+    display: none;
   }
-  .dd-menu a{
+
+  .dd-menu a {
     text-decoration: none;
   }
-  .dd-menu li{
-    color: #5e5e5e ;
+
+  .dd-menu li {
+    color: #5e5e5e;
   }
- 
+
 }
+
 @media screen and (min-width:600px) {
-  .mobs-res{
-      display: none;
+  .mobs-res {
+    display: none;
   }
 }
