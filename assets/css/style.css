@@ -2294,9 +2294,31 @@ section {
 .blogpost .tab-content .tab-pane {
   margin: 0 10%;
 }
- #carouselExampleAutoplaying .card{
+
+#carouselExampleAutoplaying .card {
   margin: 50px 50px;
- }
+}
+#carouselExampleAutoplaying .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#carouselExampleAutoplaying .card a {
+  position: absolute;
+  bottom: 10px;
+  text-decoration: none;
+  background-color:#024893 ;
+  color: white;
+  border-radius: 3px;
+  padding: 7px 12px;
+  
+
+}
+#carouselExampleAutoplaying .card a:hover {
+
+  transition: .4s;
+  transform: scale(1.1);
+}
+
 @media screen and (max-width:600px) {
   .laptops-res {
     display: none;
