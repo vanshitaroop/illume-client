@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link href="../assets/img/Illumeinitial.png" style="width: 100%;" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet"> -->
+
+    <style>
+        #header {
+            transition: all 0.5s;
+            z-index: 997;
+            padding: 15px 0;
+        }
+
+        #header.header-scrolled,
+        #header.header-inner-pages {
+            background: #024893
+        }
+
+        #header .logo {
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #header .logo a {
+            color: #fff;
+        }
+
+        #header .logo img {
+            max-height: 40px;
+        }
+
+        /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+        /**
+* Desktop Navigation 
+*/
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a,
+        .navbar a:focus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .navbar a i,
+        .navbar a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+
+        .navbar a:hover,
+        .navbar .active,
+        .navbar .active:focus,
+        .navbar li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar .getstarted,
+        .navbar .getstarted:focus {
+            padding: 8px 20px;
+            margin-left: 30px;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 14px;
+            border: 2px solid #FCD13A;
+            font-weight: 600;
+        }
+
+        .navbar .getstarted:hover,
+        .navbar .getstarted:focus:hover {
+            color: #fff;
+            background: #31a9e1;
+        }
+
+        .navbar .dropdown ul {
+            display: block;
+            position: absolute;
+            left: 14px;
+            top: calc(100% + 30px);
+            margin: 0;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-size: 14px;
+            text-transform: none;
+            font-weight: 500;
+            color: #0c3c53;
+        }
+
+        .navbar .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar .dropdown ul a:hover,
+        .navbar .dropdown ul .active:hover,
+        .navbar .dropdown ul li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar .dropdown:hover>ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+
+        .navbar .dropdown .dropdown ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+        }
+
+        .navbar .dropdown .dropdown:hover>ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+        }
+
+        @media (max-width: 1366px) {
+            .navbar .dropdown .dropdown ul {
+                left: -90%;
+            }
+
+            .navbar .dropdown .dropdown:hover>ul {
+                left: -100%;
+            }
+        }
+
+        /**
+* Mobile Navigation 
+*/
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 0.5s;
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(40, 58, 90, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a,
+        .navbar-mobile a:focus {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #024893;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar-mobile .getstarted,
+        .navbar-mobile .getstarted:focus {
+            margin: 15px;
+            color: #024893;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        .headerr {
+            padding: 2em 0;
+            text-align: center;
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin-bottom: 3em;
+        }
+
+        .container-flex {
+            max-width: 70vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        main {
+            max-width: 75%;
+        }
+
+        .article-body {
+            width: 100%;
+            text-align: justify;
+        }
+
+        .sidebar {
+            max-width: 23%;
+        }
+
+        footer {
+            background: #143774;
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        @media (max-width:1050px) {
+            .container-flex {
+                flex-direction: column;
+            }
+
+            .site-title,
+            .subtitle {
+                width: 100%;
+            }
+
+            main {
+                max-width: 100%;
+            }
+
+            .sidebar {
+                max-width: 100%;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0.5em 0;
+            }
+        }
+
+        /* articles */
+        .article-featured {
+            border-bottom: #707070 1px solid;
+            padding-bottom: 2em;
+            margin-bottom: 2em;
+        }
+
+        .article-recent {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+        }
+
+        .article-recent-main {
+            order: 2;
+        }
+
+        .article-recent-secondary {
+            order: 1;
+        }
+
+        @media (min-width: 675px) {
+            .article-recent {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .article-recent-main {
+                width: 68%;
+            }
+
+            .article-recent-secondary {
+                width: 30%;
+            }
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 80px;
+            right: 10px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+
+        .accordion {
+            padding: 2% 10%;
+            width: 100%;
+        }
+
+        .accordion input {
+            display: none;
+        }
+
+        .box {
+            position: relative;
+            background: white;
+            height: 100px;
+            margin: 20px 0;
+            width: 100%;
+            transition: all .15s ease-in-out;
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+        }
+
+        div.box {
+            background: #00BCD4;
+            z-index: 100;
+            cursor: initial;
+            box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0, 0, 0, .12), 0 2px 4px -4px rgba(0, 0, 0, .24);
+        }
+
+        div .box-title {
+            margin: 0;
+            font-weight: normal;
+            font-size: 30pt;
+            color: white;
+            cursor: initial;
+        }
+
+        .box-title {
+            font-size: 20px;
+            width: calc(100% - 40px);
+            height: 64px;
+            line-height: 64px;
+            padding: 10px 20px;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-weight: 600;
+        }
+
+        .box-content {
+            width: calc(100% - 40px);
+            padding: 30px 20px;
+            font-size: 11pt;
+            color: rgba(0, 0, 0, .54);
+            display: none;
+        }
+
+        .box-close {
+            position: absolute;
+            height: 64px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            display: none;
+        }
+
+        input:checked+.box {
+            height: auto;
+            margin: 16px 0;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+        }
+
+        input:checked+.box .box-title {
+            border-bottom: 1px solid rgba(0, 0, 0, .18);
+        }
+
+        input:checked+.box .box-content,
+        input:checked+.box .box-close {
+            display: inline-block;
+        }
+
+        .arrows section .box-title {
+            padding-left: 44px;
+            width: calc(100% - 64px);
+        }
+
+        .arrows section .box-title:before {
+            position: absolute;
+            display: block;
+            content: '\203a';
+            font-size: 30pt;
+            left: 20px;
+            top: 7px;
+            transition: transform .15s ease-in-out;
+            color: rgba(0, 0, 0, .54);
+        }
+
+        input:checked+section.box .box-title:before {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top " style="background-color: #143774;">
+        <div class="container d-flex align-items-center">
+
+            <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
+
+            <a href="../index.html" class="logo me-auto logo-mob"><img src="../assets/img/illume-logo.png" alt=""
+                    class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li class="dropdown"><a href="../service.html"><span>Services</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="../service.html">Startups and emerging businesses</a></li>
+                            <li><a href="../s2.html">Established business</a></li>
+                            <li><a href="../s3.html">Investment funds</a></li>
+                            <li><a href="../s4.html">Families and HNIs</a></li>
+                            <li><a href="../s5.html">Overseas business</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../about.html">About</a></li>
+                    <li><a class="nav-link scrollto" href="../blog.html">Blog</a></li>
+                    <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                            href="https://api.whatsapp.com/send?phone=918369850587&text=Hello"
+                            target="_blank">Connect</a></button>
+                    <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section class="headerr" style="margin-top: 60px;">
+        <div class='container '>
+            <div class='site-title'>
+                <h1>Blogs by illume</h1>
+                <p class='subtitle'>A blog exploring minimalism in life.</p>
+            </div>
+        </div>
+    </section>
+
+    <nav class="accordion arrows">
+
+        <input type="radio" name="accordion" id="cb1" />
+        <section class="box">
+            <label class="box-title" for="cb1">SAT ruling to aid appointment of independent directors</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content" class="accordion-collapse collapse show">
+                <img src="/assets/img/Sebi.jpg" width="50%" class="m-auto" alt="">
+                <br><br>
+                The Securities Appellate Tribunal (SAT) has ruled against the Securities and Exchange Board of India
+                (Sebi) and NSE in a recent matter that pertains to the appointment of an independent director (ID) by
+                Nectar Life Sciences.
+                <br><br>
+                This is an important ruling from the perspective of filling up the casual vacancy by the death of an ID,
+                said experts.
+                <br><br>
+                “Many companies that have not obtained prior shareholders’ approval can take shield of this order and
+                avoid penalty accordingly,” said Gaurav Pingle, a chartered accountant. “The word ‘unless’ in Regulation
+                17(1A) does not mean ‘prior approval’ nor the requirement of passing a special resolution is a
+                qualifying condition for appointment of a person as a director.”
+                <br><br>
+               <b> The matter</b>
+                <br><br>
+                SS Chauhan, who died on November 22, 2020, was a non-executive ID at Nectar Life Sciences, resulting in
+                a casual vacancy in the board of directors.
+                <br><br>
+                This vacancy was required to be filled up within three months. On February 13, 2021, the company
+                appointed Ajit Singh Dhillon, who is over 75 years, as an additional ID.
+                <br><br>
+                Under the Companies Act, a casual vacancy can be filled up by the board of directors but the same is
+                required to be approved by the shareholders within a stipulated time period. Before such a resolution
+                could be passed, Dhillon resigned from the board, 132 days after he was appointed.
+                <br><br>
+                On August 20, 2021, the NSE directed the company to pay Rs 3,11,520 for non-compliance of the LODR
+                Regulations and Regulation 17(1A) for the quarter ended June 2021.
+                <br><br>
+                “SAT has made a clear distinction between the casual vacancy created by the death and casual vacancy
+                created by the resignation or removal of a director. In the former, SAT has ruled that the casual
+                vacancy has to be filled up by the board within 3 months and approved by the shareholders’ resolution in
+                the next general meeting. SAT has rightly ruled that there is no special provision requiring the prior
+                approval of the shareholders for appointment of a director above the age of 75,” said Yashesh Ashar,
+                partner, Illume Advisory.
+                <br><br>
+               <b> SAT’s interpretation</b>
+                <br><br>
+                According to the Section 152(2) and Section 161(4) of the Companies Act, a director can only be
+                appointed by the shareholders of the company in the general meeting. However, in case where the office
+                of a director is vacated before his term of office expires which results in a casual vacancy then such
+                vacancy can be filled up by the board of directors within three months and such appointment has to be
+                approved by the members in the immediate next general meeting.
+                <br><br>
+                Regulation 17(1A) of LODR provides that no person shall be appointed or continue the directorship as a
+                non-executive director who has attained the age of 75 years unless a special resolution is passed to
+                that effect by the members in the general meeting.
+                <br><br>
+                SAT observed that there is no provision in the LODR regulations for filling up a casual vacancy of a
+                director in a company. Casual vacancy can only be filled up under Section 161(4) of the Companies Act
+                read with the proviso to Rule 4 of the Rules. Regulation 17(1A) is not applicable for purpose of filling
+                up a casual vacancy under Section 161(4) of the Companies Act.
+                <br><br>
+                A harmonious reading of section 17(1A) and rule 4 of regulation 17(1C) of the LODR regulations with the
+                provisions of Sections 152, 161(4) of the Companies Act makes it clear that even if a person above the
+                age of 75 years is appointed by the board of directors to fill up a casual vacancy, such appointment is
+                required to be approved subsequently within the prescribed period by a special resolution in the next
+                general meeting by the members of the company.
+                <br><br>
+                “The word ‘unless’ depicted in Regulation 17(1A) does not mean ‘prior approval’ nor the requirement of
+                passing a special resolution is a qualificatory condition for appointment of a person as a director,”
+                SAT observed.
+                <br><br>
+                Regulation 17 (1A) says: “No listed entity shall appoint a person or continue the directorship of any
+                person as a non-executive director who has attained the age of seventy five years unless a special
+                resolution is passed to that effect, in which case the explanatory statement annexed to the notice for
+                such motion shall indicate the justification for appointing such a person.”
+            </div>
+        </section>
+        <input type="radio" name="accordion" id="cb2" />
+        <section class="box">
+            <label class="box-title" for="cb2">Read me too</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
+        </section>
+        <input type="radio" name="accordion" id="cb3" />
+        <section class="box">
+            <label class="box-title" for="cb3">Item 3</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
+        </section>
+
+        <input type="radio" name="accordion" id="acc-close" />
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+918369850587&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+        class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    </div>
+
+    <footer>
+        <p><strong>illumee</strong></p>
+        <p>Copyright 2023, <a>Owner name</a></p>
+
+    </footer>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <!-- <div style="width:50%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/PmAjqmm4beKervYzFr" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+    <script src="https://kit.fontawesome.com/7d3a08d247.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

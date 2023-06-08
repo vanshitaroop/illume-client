@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link href="../assets/img/Illumeinitial.png" style="width: 100%;" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <style>
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a,
+        .navbar a:focus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .navbar a i,
+        .navbar a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+
+        .navbar a:hover,
+        .navbar .active,
+        .navbar .active:focus,
+        .navbar li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar .getstarted,
+        .navbar .getstarted:focus {
+            padding: 8px 20px;
+            margin-left: 30px;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 14px;
+            border: 2px solid #FCD13A;
+            font-weight: 600;
+        }
+
+        .navbar .getstarted:hover,
+        .navbar .getstarted:focus:hover {
+            color: #fff;
+            background: #31a9e1;
+        }
+
+        .navbar .dropdown ul {
+            display: block;
+            position: absolute;
+            left: 14px;
+            top: calc(100% + 30px);
+            margin: 0;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-size: 14px;
+            text-transform: none;
+            font-weight: 500;
+            color: #0c3c53;
+        }
+
+        .navbar .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar .dropdown ul a:hover,
+        .navbar .dropdown ul .active:hover,
+        .navbar .dropdown ul li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar .dropdown:hover>ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+
+        .navbar .dropdown .dropdown ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+        }
+
+        .navbar .dropdown .dropdown:hover>ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+        }
+
+        @media (max-width: 1366px) {
+            .navbar .dropdown .dropdown ul {
+                left: -90%;
+            }
+
+            .navbar .dropdown .dropdown:hover>ul {
+                left: -100%;
+            }
+        }
+
+        /**
+* Mobile Navigation 
+*/
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 0.5s;
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+            }
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(40, 58, 90, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a,
+        .navbar-mobile a:focus {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #024893;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar-mobile .getstarted,
+        .navbar-mobile .getstarted:focus {
+            margin: 15px;
+            color: #024893;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #FCD13A;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Lora', serif;
+            font-weight: 400;
+            color: #143774;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        a {
+            color: #1792d2;
+        }
+
+        a:hover,
+        a:focus {
+            color: #143774;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0;
+            color: #1792d2;
+            letter-spacing: 0.05em;
+            font-family: 'Ubuntu Bold', sans-serif;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+        }
+
+        .article-read-more,
+        .article-info {
+            font-size: .875rem;
+        }
+
+        .article-read-more {
+            color: #1792d2;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .article-read-more:hover,
+        .article-read-more:focus {
+            color: #143774;
+            text-decoration: underline;
+        }
+
+        .article-info {
+            margin: 2em 0;
+        }
+
+        .headerr {
+            padding: 2em 0;
+            text-align: center;
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin-bottom: 3em;
+        }
+
+        .container-flex {
+            max-width: 70vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        main {
+            max-width: 75%;
+        }
+
+        .article-body {
+            width: 100%;
+            text-align: justify;
+        }
+
+        .sidebar {
+            max-width: 23%;
+        }
+
+        footer {
+            background: #143774;
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        @media (max-width:1050px) {
+            .container-flex {
+                flex-direction: column;
+            }
+
+            .site-title,
+            .subtitle {
+                width: 100%;
+            }
+
+            main {
+                max-width: 100%;
+            }
+
+            .sidebar {
+                max-width: 100%;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 0.5em 0;
+            }
+        }
+
+        /* articles */
+        .article-featured {
+            border-bottom: #707070 1px solid;
+            padding-bottom: 2em;
+            margin-bottom: 2em;
+        }
+
+        .article-recent {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+        }
+
+        .article-recent-main {
+            order: 2;
+        }
+
+        .article-recent-secondary {
+            order: 1;
+        }
+
+        @media (min-width: 675px) {
+            .article-recent {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .article-recent-main {
+                width: 68%;
+            }
+
+            .article-recent-secondary {
+                width: 30%;
+            }
+        }
+
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 80px;
+            right: 10px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top " style="background-color: #143774;">
+        <div class="container d-flex align-items-center">
+
+            <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
+
+            <a href="../index.html" class="logo me-auto logo-mob"><img src="../assets/img/illume-logo.png" alt=""
+                    class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li class="dropdown"><a href="../service.html"><span>Services</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="../service.html">Startups and emerging businesses</a></li>
+                            <li><a href="../s2.html">Established business</a></li>
+                            <li><a href="../s3.html">Investment funds</a></li>
+                            <li><a href="../s4.html">Families and HNIs</a></li>
+                            <li><a href="../s5.html">Overseas business</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../about.html">About</a></li>
+                    <li><a class="nav-link scrollto" href="../blog.html">Blog</a></li>
+                    <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                            href="https://api.whatsapp.com/send?phone=918369850587&text=Hello"
+                            target="_blank">Connect</a></button>
+                    <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section class="headerr" style="margin-top: 60px;">
+        <div class='container '>
+            <div class='site-title'>
+                <h1>Blogs by illume</h1>
+                <p class='subtitle'>A blog exploring minimalism in life.</p>
+            </div>
+        </div>
+    </section>
+    <div class="container container-flex">
+        <main role="main">
+            <article class="article-featured" data-aos="fade-right">
+                <h2 class="article-title">Compulsorily convertible debentures (‘CCD’) may not be treated as financial
+                    debt but
+                    the unpaid interest on CCDs is to be treated as financial debt for the purpose of
+                    insolvency1</h2>
+                <img src="../assets/img/Compulsory-convertible-debentures.png "
+                    alt="simple white desk on a white wall with a plant on the far right side"
+                    class="article-image w-100">
+                <p class="article-info">June 06, 2023 | 3 comments</p>
+                <p class="article-body">In a recent ruling, the Hon’ble National Company Law Tribunal (‘NCLT’) evaluated
+                    as to whether the principal amount
+                    compulsorily convertible debentures (‘CCDs’) and / or the interest thereon constitute financial debt
+                    as per the provisions of
+                    the Invsolvency and Bankruptcy Code, 2015 (‘IBC’)
+
+                    <br> <br>
+                    <b> Facts of the case:</b>
+                    <br><br>
+                    1. The petitioner had subscribed to CCDs of the borrower carrying interest of 11.5% p.a. The
+                    principal amount of the
+                    CCDs were convertible at par. The interest was payable in cash.
+                    <br><br>
+                    2. The CCDs were mandatorily and compulsorily convertible into equity on (i) expiry of 10 years from
+                    the date of issue
+                    of CCDs; (ii) on the winding up, liquidation or dissolution of the borrower; or (iii) initial public
+                    offering of the
+                    borrower, whichever is earlier. Further, the petitioner had an option to convert the CCDs at
+                    anytime.
+                    <br><br>
+                    3. No interest was paid on the CCDs over the years.
+                    <br><br>
+                    4. The petitioner filed a petition admitted its claim for the principal amount plus the interest
+                    amount of CCDs as
+                    financial debt.
+                    <br><br>
+                    5. The borrower contested the claim stating that the CCDs are shown as other equity in its books and
+                    therefore, the
+                    books of the borrower did not acknowledge the debt as financial debt.
+                    <br><br>
+                    <b> Issue:</b>
+                    <br><br>
+                    1. Whether the principal and / or the interest on the CCDs be treated as financial debt for the
+                    purpose of IBC.
+                    <br><br>
+                    <b> Ruling and core observations:</b>
+                    <br><br>
+                    The Hon’ble NCLT, ruling in favour of the petitioner, admitting the claim of the petitioner held
+                    that that the principal amount
+                    of CCDs cannot be treated as financial debt but the outstanding interest on the CCDs will be treated
+                    as financial debt for
+                    the purpose of IBC:
+                    <br><br>
+                    1. The Financial Statement of the Corporate Debtor is not conclusive evidence of the
+                    characterization of amounts due in
+                    relation to CCDs.
+                    <br><br>
+                    2. The CCDs are debt until conversion. However, since the CCDs are compulsorily convertible into
+                    equity on the winding
+                    up / liquidation of the borrower, the mandatory conversion date would arise on the commencement of
+                    the insolvency
+                    process under IBC. In view of mandatory conversion date occurring on the commencement of insolvency
+                    process, the
+                    Company’s obligations towards principal component of CCDs ceases to exist on that day and
+                    accordingly, no debt to
+                    the extent of Principal amount of CCDs can be said to exist at commencement of insolvency process.
+                    <br><br>
+                    3. Interest accrued thereupon till the date of conversion is certainly an obligation or liability of
+                    the borrower. The interest
+                    on debt is also a financial debt. Thus, the amount of accrued interest till the mandatory conversion
+                    date of CCDs i.e.,
+                    CIRP commencement date is a financial debt and deserves to be admitted.
+                    <br><br>
+                    <b>Our comments:</b>
+                    <br><br>
+                    The above ruling is a very important ruling in case of issue of CCDs by companies and the
+                    applicability of the IBC
+                    to CCDs. As rightly pointed ruled by the Hon’ble NCLT, the CCDs though being debt until conversion
+                    cannot be
+                    treated as financial debt. It is interesting to note that in this case the petitioner was a
+                    non-resident and as per
+                    the foreign direct investment regulations, the CCDs are treated at par with equity shares for the
+                    purpose of
+                    investment. This ruling also provides much clarity in relation to outstanding interest on CCDs, more
+                    particularly
+                    to the non-resident investors.
+                    <br><br>
+                    On the fine reading, the Hon’ble NCLT based its judgement on the conversion terms which provided for
+                    mandatory conversion on winding-up, liquidation or dissolution of the borrower and treated the event
+                    of
+                    commencement of the insolvency proceedings as an analogous event. Whether this aspect could be
+                    exploited
+                    while drafting the terms of CCDs to derive more comfort, especially for resident investors, would be
+                    interesting
+                    to watch out for
+                </p>
+
+            </article>
+
+            <article class="article-recent" data-aos="fade-right">
+                <div class="article-recent-main">
+                    <h2 class="article-title">SAT ruling to aid appointment of independent directors</h2>
+                    <p class="article-body">The Securities Appellate Tribunal (SAT) has ruled against the Securities and
+                        Exchange Board of India (Sebi) and NSE in a recent matter that pertains to the appointment of an
+                        independent director (ID) by Nectar Life Sciences.
+                    </p>
+                    <a href="../blog/blog1.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="../assets/img/Sebi.jpg" alt="two dumplings on a wood plate with chopsticks"
+                        class="article-image">
+                    <p class="article-info">June 06, 2023 | 3 comments</p>
+                </div>
+            </article>
+
+            <article class="article-recent" data-aos="fade-right">
+                <div class="article-recent-main">
+                    <h2 class="article-title">SEBI Consulting papers for the Alternative Investment Funds (‘AIFs’) and
+                        Foreign Venture Capital Investors (‘FVCIs’)</h2>
+                    <p class="article-body">The Securities and Exchange Board of India (‘SEBI’) has issued new series of
+                        consulting papers for the alternative investment funds (‘AIFs’) and foreign venture capital
+                        investors (‘FVCIs’) on May 18, 2023 and May 23, 2023.
+                    </p>
+                    <a href="../blog/blog2.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="../assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg"
+                        alt="a chair white chair at a white desk on a white wall" class="article-image">
+                    <p class="article-info">June 06, 2019 | 3 comments</p>
+                </div>
+            </article>
+
+            <article class="article-recent" data-aos="fade-right">
+                <div class="article-recent-main">
+                    <h2 class="article-title">Angel tax provisions upto the Finance Act, 2023</h2>
+                    <p class="article-body">Pursuant to the interaction with various stakeholders, the Ministry of
+                        Finance / CBDT
+                        decided to make amendments to the Angel Tax
+                        Provisions and Rule 11UA</p>
+                    <a href="../blog/blog4.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="../assets/img/angle.JPG" alt="a green plant in a clear, round vase with water in it"
+                        class="article-image">
+                    <p class="article-info">July 3, 2019 | 3 comments</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- <aside class="sidebar" data-aos="fade-left">
+      <div class="sidebar-widget">
+        <h2 class="widget-title">RECENT POSTS</h2>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">SAT ruling to aid appointment...</h3>
+          <img
+            src="../assets/img/Sebi.jpg"
+            alt="two dumplings on a wood plate with chopsticks" class="widget-image">
+        </div>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">SEBI Consulting papers for the Alternative....</h3>
+          <img
+            src="../assets/img/Compulsory-convertible-debentures.png"
+            alt="a chair white chair at a white desk on a white wall" class="widget-image">
+        </div>
+        <div class="widget-recent-post">
+          <h3 class="widget-recent-post-title">Compulsorily convertible debentures (‘CCC’)...</h3>
+          <img
+            src="../assets/img/angle.JPG"
+            alt="a green plant in a clear, round vase with water in it" class="widget-image">
+        </div>
+      </div>
+
+    </aside> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=+918369850587&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+    </div>
+
+    <footer>
+        <p><strong>illumee</strong></p>
+        <p>Copyright 2023, <a>Owner name</a></p>
+
+    </footer>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <!-- <div style="width:50%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/PmAjqmm4beKervYzFr" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+    <script src="https://kit.fontawesome.com/7d3a08d247.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
