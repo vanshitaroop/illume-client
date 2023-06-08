@@ -2304,7 +2304,8 @@ section {
 
 #carouselExampleAutoplaying .card a {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
+  left: 100px;
   text-decoration: none;
   background-color:#024893 ;
   color: white;
