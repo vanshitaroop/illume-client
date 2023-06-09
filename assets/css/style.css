@@ -2483,7 +2483,7 @@ right: 45%;
    }
 }
 
-@media (max-width : 300px){
+@media (max-width : 350px){
   #featureContainer .card {
     height: 55vh;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
