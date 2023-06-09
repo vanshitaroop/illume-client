@@ -36,7 +36,9 @@ h5,
 h6 {
   font-family: "Jost", sans-serif;
 }
-
+ a{
+  text-decoration: none;
+ }
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -2462,6 +2464,16 @@ right: 45%;
  margin: 20px;
 
 }
+
+@media (max-width : 500px){
+  #featureContainer .card {
+    height: 55vh;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px; */
+   
+   }
+}
+
 #featureContainer .card a {
  position: absolute;
  bottom: 5%;
