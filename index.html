@@ -1006,12 +1006,95 @@
       <h2 class="text-center fw-bold">Our Blogs</h2>
 
 
+      <div class="container" id="featureContainer">
+        <div class="row mx-auto my-auto justify-content-center">
+          <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Controls. OPTIONAL -->
+            <div class=" buttons pe-md-4 ">
+              <a class="indicator" href="#featureCarousel" role="button" data-bs-slide="prev">
+                <span  class="bi bi-chevron-left"></span>
+              </a> &nbsp;&nbsp;
+              <a class="w-auto indicator" href="#featureCarousel" role="button" data-bs-slide="next">
+                <span  class="bi bi-chevron-right"></span>
+              </a>
+            </div>
+            <!-- Add Slides To The Carousel -->
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img text-center ">
+                      <img class="card-img-top  " style="height: 250px;" src="./assets/img/Sebi.jpg" alt="Card image cap">
+                      <br><br>
+                      <h6>SAT ruling to aid appointment of independent directors</h6>
+                    
+                 
+                      <a href="./blog/blog1.html" >Continue Reading</a>
+                      <br><br>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img text-center ">
+                      <img class="card-img-top  " style="height: 250px;" src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg" alt="Card image cap">
+                      <br><br>
+                      <h6>SEBI Consulting papers for the Alternative Investment Funds (‘AIFs’) and Foreign Venture Capital Investors (‘FVCIs’)</h6>
+                   
+                    
+                    
+                      <a href="./blog/blog2.html" >Continue Reading</a>
+                      <br><br>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img text-center ">
+                      <img class="card-img-top " style="height: 250px;" src="./assets/img/Compulsory-convertible-debentures.png" alt="Card image cap">
+                      <br><br>
+                      <h6>Compulsorily convertible debentures (‘CCD’) may not be treated as financial debt but the unpaid interest on CCDs is to be treated as financial debt for the purpose of insolvency</h6>
+                    
+                      <a href="./blog/blog3.html" >Continue Reading</a>
+                      <br><br>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-img text-center ">
+                      <img class="card-img-top  " style="height: 250px;" src="./assets/img/angle.JPG" alt="Card image cap">
+                      <br><br>
+                      <h6>Angel tax provisions upto the Finance Act, 2023</h6>
+                      
+                     
+                 
+                      <a href="./blog/blog4.html" >Continue Reading</a>
+                      <br><br>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
 
-
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="d-flex" style="justify-content: center;">
@@ -1080,7 +1163,7 @@
             aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> -->
 
 
 
@@ -1461,7 +1544,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-
+let myCarousel = document.querySelectorAll('#featureContainer .carousel .carousel-item');
+myCarousel.forEach((el) => {
+  const minPerSlide = 4
+  let next = el.nextElementSibling
+  for (var i=1; i<minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = myCarousel[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+  }
+})
 
   $(document).ready(function () {
     $('.carousel').carousel({

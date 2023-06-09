@@ -5,112 +5,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Blog</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 
 <style>
-body {
-  height: calc(100% - 20px);
-  width: calc(100% - 20px);
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  background: #f2f2f2;
-  color: rgba(0,0,0,.87);
-  font-family: 'Roboto', sans-serif;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.accordion {
-  margin: auto;
-  width: 400px;
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
-.accordion input {
-  display: none;
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
-.box {
-  position: relative;
-  background: white;
-    height: 64px;
-    transition: all .15s ease-in-out;
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
-.box::before {
-    content: '';
-    position: absolute;
+@media (max-width: 767px) {
+  #featureContainer .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  #featureContainer .carousel-inner .carousel-item > div:first-child {
     display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+  }
 }
-div.box {
-  background: #00BCD4;
-  z-index: 100;
-  cursor: initial;
-  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+#featureContainer .carousel-inner .carousel-item.active,
+#featureContainer .carousel-inner .carousel-item-next,
+#featureContainer .carousel-inner .carousel-item-prev {
+  display: flex;
 }
-div .box-title {
-  margin: 0;
-  font-weight: normal;
-  font-size: 16pt;
+@media (min-width: 768px) {
+  
+  #featureContainer .carousel-inner .carousel-item-end.active,
+  #featureContainer .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  #featureContainer .carousel-inner .carousel-item-start.active, 
+  #featureContainer .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+  #featureContainer .card img{
+    width: 90%;
+    height: 40vh;
+  }
+  #featureContainer .carousel-item{
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  #featureContainer .card img{
+    width: 100%;
+    height: 75vh;
+  }
+}
+#featureContainer .carousel-inner .carousel-item-end,
+#featureContainer .carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+#featureContainer .card{
+  border: 0;
+}
+#featureContainer .card{
+  position: relative;
+}
+#featureContainer .card .card-img-overlays{
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+}
+#featureContainer a{
+  text-decoration: none;
+}
+#featureContainer .indicator{
+  border: 1px solid rgb(202, 202, 202);
+  padding: 3px 6px 3px 6px;
+}
+#featureContainer .indicator:hover{
+  background-color: blue;
+  border: 1px solid blue;
+  transition: 200ms;
+}
+#featureContainer .indicator:hover{
   color: white;
-  cursor: initial;
+  transition: 200ms;
 }
-.box-title {
-  width: calc(100% - 40px);
-  height: 64px;
-  line-height: 64px;
-  padding: 0 20px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+#featureContainer .indicator {
+  color: lightgray;
 }
-.box-content {
-  width: calc(100% - 40px);
-  padding: 30px 20px;
-  font-size: 11pt;
-  color: rgba(0,0,0,.54);
-  display: none;
-}
-.box-close {
-  position: absolute;
-  height: 64px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  display: none;
-}
-input:checked + .box {
-  height: auto;
-  margin: 16px 0;
-    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
-}
-input:checked + .box .box-title {
-  border-bottom: 1px solid rgba(0,0,0,.18);
-}
-input:checked + .box .box-content,
-input:checked + .box .box-close {
-  display: inline-block;
-}
-.arrows section .box-title {
-  padding-left: 44px;
-  width: calc(100% - 64px);
-}
-.arrows section .box-title:before {
-  position: absolute;
-  display: block;
-  content: '\203a';
-  font-size: 18pt;
-  left: 20px;
-  top: -2px;
-  transition: transform .15s ease-in-out;
-  color: rgba(0,0,0,.54);
-}
-input:checked + section.box .box-title:before {
-  transform: rotate(90deg);
+#featureContainer .float-end{
+  padding-top: 10px;
 }
 </style>
 </head>
@@ -120,35 +113,78 @@ input:checked + section.box .box-title:before {
 
  
   
-    <nav class="accordion arrows">
-        <div class="box">
-          <label for="acc-close" class="box-title">Accordion menu</label>
+  <div class="container my-3 mt-5" id="featureContainer">
+    <div class="row mx-auto my-auto justify-content-center">
+      <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Controls. OPTIONAL -->
+        <div class="float-end pe-md-4">
+          <a class="indicator" href="#featureCarousel" role="button" data-bs-slide="prev">
+            Left Arrow Here
+          </a> &nbsp;&nbsp;
+          <a class="w-aut indicator" href="#featureCarousel" role="button" data-bs-slide="next">
+            Right Arrow Here
+          </a>
         </div>
-        <input type="radio" name="accordion" id="cb1" />
-        <section class="box">
-          <label class="box-title" for="cb1">Readme</label>
-          <label class="box-close" for="acc-close"></label>
-          <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
-        </section>
-        <input type="radio" name="accordion" id="cb2" />
-        <section class="box">
-          <label class="box-title" for="cb2">Read me too</label>
-          <label class="box-close" for="acc-close"></label>
-          <div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
-        </section>
-        <input type="radio" name="accordion" id="cb3" />
-        <section class="box">
-          <label class="box-title" for="cb3">Item 3</label>
-          <label class="box-close" for="acc-close"></label>
-          <div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
-        </section>
-    
-        <input type="radio" name="accordion" id="acc-close" />
-      </nav>
+        <!-- Add Slides To The Carousel -->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-img">
+                  <img src="img1.jpg" class="img-fluid">
+                </div>
+                <div class="card-img-overlays">Slide 1</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-img">
+                  <img src="img2.jpg" class="img-fluid">
+                </div>
+                <div class="card-img-overlays">Slide 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-img">
+                  <img src="img3.jpg" class="img-fluid">
+                </div>
+                <div class="card-img-overlays">Slide 3</div>
+              </div>
+            </div>
+          </div>
+          ... more slides here
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+    let myCarousel = document.querySelectorAll('#featureContainer .carousel .carousel-item');
+myCarousel.forEach((el) => {
+  const minPerSlide = 4
+  let next = el.nextElementSibling
+  for (var i=1; i<minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = myCarousel[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+  }
+})
+
+    </script>
      
 </body>
 
