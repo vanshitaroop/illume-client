@@ -2233,6 +2233,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: #024893;
+  font-family: 'Playfair', serif;
 }
 
 .blogpost h2::before {
