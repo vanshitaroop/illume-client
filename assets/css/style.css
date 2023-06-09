@@ -2467,6 +2467,15 @@ right: 45%;
  margin: 20px;
 
 }
+@media (min-width: 1024px) {
+  #featureContainer .card {
+    height: 55vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px;
+   
+   }
+}
+
 
 @media (max-width:400px){
   #featureContainer .card {
@@ -2476,7 +2485,6 @@ right: 45%;
    
    }
 }
-
 
 #featureContainer .card a {
  position: absolute;
