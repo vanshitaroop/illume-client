@@ -2405,6 +2405,9 @@ section {
     height: 75vh;
   }
 }
+
+
+
 #featureContainer .carousel-inner .carousel-item-end,
 #featureContainer .carousel-inner .carousel-item-start { 
   transform: translateX(0);
@@ -2465,11 +2468,11 @@ right: 45%;
 
 }
 
-@media (max-width : 500px){
+@media (max-width:400px){
   #featureContainer .card {
-    height: 55vh;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 20px; */
+    height: 67vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px;
    
    }
 }
