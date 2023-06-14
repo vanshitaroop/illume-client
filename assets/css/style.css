@@ -126,7 +126,7 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
+
   padding: 15px 0;
 }
 
@@ -169,8 +169,8 @@ h6 {
   display: flex;
   list-style: none;
   align-items: center;
+  z-index: 2000;
 }
-
 .navbar li {
   position: relative;
 }
@@ -226,7 +226,7 @@ h6 {
   top: calc(100% + 30px);
   margin: 0;
   padding: 10px 0;
-  z-index: 99;
+  z-index:  1000;
   opacity: 0;
   visibility: hidden;
   background: #fff;
@@ -286,11 +286,11 @@ h6 {
   }
 }
 
-/**
-* Mobile Navigation 
-*/
+
+ /* Mobile Navigation  */
+
 .mobile-nav-toggle {
-  color: #fff;
+  color: #ffffff;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -314,14 +314,14 @@ h6 {
 
 .navbar-mobile {
   position: fixed;
-  overflow: hidden;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background: rgba(40, 58, 90, 0.9);
   transition: 0.3s;
-  z-index: 999;
+   z-index: 2000
+
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -332,6 +332,7 @@ h6 {
 
 .navbar-mobile ul {
   display: block;
+ height: 50vh;
   position: absolute;
   top: 55px;
   right: 15px;
@@ -343,6 +344,7 @@ h6 {
   overflow-y: auto;
   transition: 0.3s;
 }
+
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
@@ -368,7 +370,7 @@ h6 {
   display: none;
   margin: 10px 20px;
   padding: 10px 0;
-  z-index: 99;
+  z-index: 999;
   opacity: 1;
   visibility: visible;
   background: #fff;
@@ -395,7 +397,7 @@ h6 {
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
-}
+} 
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -404,6 +406,7 @@ h6 {
   width: 100%;
   height: 80vh;
   background: #024893;
+
 }
 
 #hero .container {
