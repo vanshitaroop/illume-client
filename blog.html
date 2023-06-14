@@ -301,7 +301,13 @@
     }
 
     .article-title {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
+      color: #024893;
+      margin: 5% 0;
+    }
+    .article-title:hover {
+      color: #1792d2;
+      cursor: pointer;
     }
 
     .article-read-more,
@@ -334,17 +340,22 @@
     }
 
     .container-flex {
-      max-width: 70vw;
+      max-width: 60vw;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       margin-bottom: 1em;
+    }
+    .sidebar{
+      margin-left: 10%;
+  
     }
 
 
     img {
       max-width: 100%;
       display: block;
+      border-radius: 3px;
     }
 
     main {
@@ -357,7 +368,7 @@
     }
 
     .sidebar {
-      max-width: 23%;
+      max-width: 35%;
     }
 
     footer {
@@ -406,6 +417,13 @@
       nav li {
         margin: 0.5em 0;
       }
+      .container-flex {
+      max-width: 90vw;
+    
+    }
+    .sidebar {
+    margin-left:0% ;
+}
     }
 
     /* articles */
@@ -462,6 +480,14 @@
     .my-float {
       margin-top: 16px;
     }
+   
+    hr.new {
+      opacity: 1;
+  border: 1px solid #143774;
+  width: 50px;
+  border-radius: 2px;
+}
+
   </style>
 </head>
 
@@ -508,7 +534,7 @@
   <div class="container container-flex">
     <main role="main">
       <article class="article-featured" data-aos="fade-right">
-        <h2 class="article-title">SAT ruling to aid appointment of independent directors</h2>
+        <h2 class="article-title">SAT Ruling To Aid Appointment of Independent Directors</h2>
         <img src="./assets/img/Sebi.jpg" alt="simple white desk on a white wall with a plant on the far right side"
           class="article-image">
         <p class="article-info">June 06, 2023 | 3 comments</p>
@@ -518,7 +544,35 @@
         <a href="./blog/blog1.html" class="article-read-more">CONTINUE READING</a>
       </article>
 
-      <article class="article-recent" data-aos="fade-right">
+
+      <article class="article-featured" data-aos="fade-right">
+        <h2 class="article-title">SEBI Consulting Papers For The Alternative Investment Funds (‘AIFs’) and Foreign
+          Venture Capital Investors (‘FVCIs’)</h2>
+        <img src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg" alt="simple white desk on a white wall with a plant on the far right side"
+          class="article-image">
+        <p class="article-info">June 06, 2023 | 3 comments</p>
+        <p class="article-body">The Securities and Exchange Board of India (‘SEBI’) has issued new series of
+          consulting papers for the alternative investment
+          funds (‘AIFs’) and foreign venture capital investors (‘FVCIs’) on May 18, 2023 and May 23, 2023.</p>
+        <a href="./blog/blog2.html" class="article-read-more">CONTINUE READING</a>
+      </article>
+
+
+
+      <article class="article-featured" data-aos="fade-right">
+        <h2 class="article-title">Compulsorily Convertible Debentures (‘CCD’) May Not Be Treated as Financial Debt But
+          the Unpaid Interest On CCDs Is to be Treated As Financial Debt For the Purpose Of
+          Insolvency</h2>
+        <img src="./assets/img/Compulsory-convertible-debentures.png" alt="simple white desk on a white wall with a plant on the far right side"
+          class="article-image">
+        <p class="article-info">June 06, 2023 | 3 comments</p>
+        <p class="article-body">In a recent ruling, the Hon’ble National Company Law Tribunal (‘NCLT’) evaluated as to whether the principal amount 
+          compulsorily convertible debentures (‘CCDs’) and / or the interest thereon constitute financial debt as per the provisions of
+          the Invsolvency and Bankruptcy Code, 2015 (‘IBC’)</p>
+        <a href="./blog/blog1.html" class="article-read-more">CONTINUE READING</a>
+      </article>
+
+      <!-- <article class="article-recent" data-aos="fade-right">
         <div class="article-recent-main">
           <h2 class="article-title">SEBI Consulting papers for the Alternative Investment Funds (‘AIFs’) and Foreign
             Venture Capital Investors (‘FVCIs’)</h2>
@@ -567,12 +621,22 @@
             alt="a green plant in a clear, round vase with water in it" class="article-image">
           <p class="article-info">July 3, 2019 | 3 comments</p>
         </div>
-      </article>
+      </article> -->
     </main>
 
     <aside class="sidebar" data-aos="fade-left">
       <div class="sidebar-widget">
-        <h2 class="widget-title">RECENT POSTS</h2>
+<br><br>
+        <h5 class="list-title text-black">Topics</h5>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+         
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <br><br>
+        <h3 class="widget-title">RECENT POSTS</h3>
+        <hr class="new">
         <div class="widget-recent-post">
           <br>
           <h4 class="widget-recent-post-title"><a href="">SAT ruling to aid appointment...</a></h4>
