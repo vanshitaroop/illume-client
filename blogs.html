@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link href="assets/img/Illumeinitial.png" style="width: 100%;" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: black;
+        }
+
+        main p {
+            color: black;
+            margin: 0;
+            font-size: 17px;
+            margin: 20px 0;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .filterDiv {
+            float: left;
+            color: #ffffff;
+            width: 100px;
+            padding-bottom: 50px;
+            text-align: center;
+            margin: 2px;
+            display: none;
+        }
+
+        .filterDiv button a {
+            color: white;
+        }
+
+        .filterDiv button {
+            border: none;
+
+            background: #0c3c53;
+            font-size: 18px;
+            padding: 7px 17px;
+            color: white;
+            border-radius: 4px;
+            transform: translatey(0px);
+            transition: .4s;
+
+        }
+
+        .filterDiv button:hover {
+            transform: translatey(-5px);
+            transition: .5s;
+
+        }
+
+        .show {
+            display: block;
+        }
+
+        .body_container {
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        /* Style the buttons */
+        /* .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        } */
+
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .col-2 ul li {
+            padding: 4px;
+        }
+
+        .col-2 ul li:hover {
+            background-color: #0c3c53;
+            color: white;
+            padding: 4px;
+        }
+
+        .col-2 button {
+            width: 200px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background: transparent;
+
+        }
+
+
+        footer {
+            background: #143774;
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer p {
+
+            color: white;
+        }
+
+        @media (max-width:700px) {
+            main .row {
+                display: flex;
+                flex-direction: column;
+            }
+
+            main .row .col-5,
+            .col-2 {
+                width: 100%;
+                transition: .9s;
+            }
+
+            .col-2 button {
+                width: 200px;
+
+            }
+        }
+
+        hr {
+            border-top: 1px solid #143774;
+            ;
+            opacity: 1;
+        }
+
+        .headerr {
+            padding: 2em 0;
+            text-align: center;
+            background: #f0f8ff;
+            font-family: sans-serif;
+            margin-bottom: 3em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top " style="background-color: #143774;">
+        <div class="container d-flex align-items-center">
+
+            <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
+
+            <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt=""
+                    class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li class="dropdown"><a href="service.html"><span>Services</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="service.html">Startups and emerging businesses</a></li>
+                            <li><a href="s2.html">Established business</a></li>
+                            <li><a href="s3.html">Investment funds</a></li>
+                            <li><a href="s4.html">Families and HNIs</a></li>
+                            <li><a href="s5.html">Overseas business</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="/about.html">About</a></li>
+                    <li><a class="nav-link scrollto" href="/blog.html">Blog</a></li>
+                    <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
+                            href="https://api.whatsapp.com/send?phone=918369850587&text=Hello"
+                            target="_blank">Connect</a></button>
+                    <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section class="headerr" style="margin-top: 60px;">
+        <div class='container'>
+            <div class='site-title'>
+                <h1>Blogs by illume</h1>
+                <p class='subtitle'>A blog exploring minimalism in life.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div >
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('it')"> Cars</button>
+        <button class="btn" onclick="filterSelection('medical')"> Animals</button>
+        <button class="btn" onclick="filterSelection('currency')"> Fruits</button>
+
+
+    </div> -->
+
+
+    <main>
+        <div class="row justify-content-center w-100">
+
+
+
+            <div class="col-5 ">
+                <div class="blogs">
+                    <div class="filterDiv it w-100  text-start">
+                        <h4>SAT Ruling To Aid Appointment of Independent Directors</h4>
+                        <img src="./assets/img/Sebi.jpg" width="100%" alt="">
+                        <p>The Securities Appellate Tribunal (SAT) has ruled against the Securities and Exchange Board
+                            of India (Sebi) and NSE in a recent matter that pertains to the appointment of an
+                            independent director (ID) by Nectar Life Sciences.</p>
+                        <button><a href="./blog/blog1.html">continue reading</a></button>
+                        <hr>
+                    </div>
+
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>SEBI Consulting Papers For The Alternative Investment Funds (‘AIFs’) and Foreign Venture
+                            Capital Investors (‘FVCIs’)</h4>
+                        <img src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg" width="100%" alt="">
+                        <p>The Securities and Exchange Board of India (‘SEBI’) has issued new series of consulting
+                            papers for the alternative investment funds (‘AIFs’) and foreign venture capital investors
+                            (‘FVCIs’) on May 18, 2023 and May 23, 2023.</p>
+                        <button><a href="./blog/blog2.html">continue reading</a></button>
+                        <hr>
+                    </div>
+
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>Compulsorily Convertible Debentures (‘CCD’) May Not Be Treated as Financial Debt But the
+                            Unpaid Interest On CCDs Is to be Treated As Financial Debt For the Purpose Of Insolvency
+                        </h4>
+                        <img src="./assets/img/Compulsory-convertible-debentures.png" width="100%" alt="">
+                        <p>In a recent ruling, the Hon’ble National Company Law Tribunal (‘NCLT’) evaluated as to
+                            whether the principal amount compulsorily convertible debentures (‘CCDs’) and / or the
+                            interest thereon constitute financial debt as per the provisions of the Invsolvency and
+                            Bankruptcy Code, 2015 (‘IBC’)</p>
+                        <button><a href="./blog/blog3.html">continue reading</a></button>
+                    </div>
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>Angel tax provisions upto the Finance Act, 2023
+
+                        </h4>
+                        <img src="./assets/img/angle.JPG" width="100%" alt="">
+                        <p>Pursuant to the interaction with various stakeholders, the Ministry of Finance / CBDT decided
+                            to make amendments to the Angel Tax Provisions and Rule 11UA</p>
+                        <button><a href="./blog/blog4.html">continue reading</a></button>
+                    </div>
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>Redeemable preference shares to be treated as debt in certain circumstances1
+
+                        </h4>
+                        <img src="./assets/img/r" width="100%" alt="">
+                        <p>In a recent ruling, the Hon’ble Delhi High Court evaluated as to whether redeemable
+                            preference shares (‘RPS’) issued by a
+                            company could be treated as a part of the net-worth of the Company and in what circumstances
+                            the RPS could be treated
+                            as debt:</p>
+                        <button><a href="./blog/blog5.html">continue reading</a></button>
+                    </div>
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>Only USD 102 million FDI from GIFT City so far
+
+                        </h4>
+                        <img src="./assets/img/USD doller.JPG" width="100%" alt="">
+                        <p>Most of this investment has come in 2022-23. During the same year, $17 billion in FDI came
+                            from Singapore, and $6 billion each from Mauritius and UAE.</p>
+                        <button><a href="./blog/blog6.html">continue reading</a></button>
+                    </div>
+                    <div class="filterDiv medical w-100  text-start" style="  justify-content: flex-end;">
+
+                        <h4>Reporting norms for fund management entities (‘FMEs’) in International Financial Services
+                            Centre (‘IFSC’) <sup>1</sup>
+
+                        </h4>
+                        <img src="./assets/img/IFSC.png" width="100%" alt="">
+                        <p>The International Financial Services Authority (‘IFSCA’) has issued a circular prescribing
+                            reporting requirements for fund management entities (‘FMEs’) registered under the IFSCA
+                            (Fund Management) Regulations, 2022 (‘IFMR’)</p>
+                        <button><a href="./blog/blog7.html">continue reading</a></button>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <div class="col-2 ps-5">
+                <div class="recent_blogs">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Blog Topics
+                        </button>
+                        <ul class="dropdown-menu" style="padding-left: 10px; cursor: pointer; ">
+                            <li active onclick="filterSelection('all')">All</li>
+                            <li onclick="filterSelection('it')">Regulatory</li>
+                            <li onclick="filterSelection('medical')">M&A </li>
+                            <li onclick="filterSelection('medical')">Private Clients </li>
+                            <li onclick="filterSelection('medical')">PE / VC </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <p><strong>illumee</strong></p>
+        <p>Copyright 2023, <a>Owner name</a></p>
+
+    </footer>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!-- <div style="width:50%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/PmAjqmm4beKervYzFr" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> -->
+    <script src="https://kit.fontawesome.com/7d3a08d247.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

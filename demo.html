@@ -1,310 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-  <style>
-    .navbar {
-      padding: 0;
-    }
-
-    .navbar ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    .navbar li {
-      position: relative;
-    }
-
-    .navbar a,
-    .navbar a:focus {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0 10px 30px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #fff;
-      white-space: nowrap;
-      transition: 0.3s;
-    }
-
-    .navbar a i,
-    .navbar a:focus i {
-      font-size: 12px;
-      line-height: 0;
-      margin-left: 5px;
-    }
-
-    .navbar a:hover,
-    .navbar .active,
-    .navbar .active:focus,
-    .navbar li:hover>a {
-      color: #FCD13A;
-    }
-
-    .navbar .getstarted,
-    .navbar .getstarted:focus {
-      padding: 8px 20px;
-      margin-left: 30px;
-      border-radius: 50px;
-      color: #fff;
-      font-size: 14px;
-      border: 2px solid #FCD13A;
-      font-weight: 600;
-    }
-
-    .navbar .getstarted:hover,
-    .navbar .getstarted:focus:hover {
-      color: #fff;
-      background: #31a9e1;
-    }
-
-    .navbar .dropdown ul {
-      display: block;
-      position: absolute;
-      left: 14px;
-      top: calc(100% + 30px);
-      margin: 0;
-      padding: 10px 0;
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      background: #fff;
-      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-      transition: 0.3s;
-      border-radius: 4px;
-    }
-
-    .navbar .dropdown ul li {
-      min-width: 200px;
-    }
-
-    .navbar .dropdown ul a {
-      padding: 10px 20px;
-      font-size: 14px;
-      text-transform: none;
-      font-weight: 500;
-      color: #0c3c53;
-    }
-
-    .navbar .dropdown ul a i {
-      font-size: 12px;
-    }
-
-    .navbar .dropdown ul a:hover,
-    .navbar .dropdown ul .active:hover,
-    .navbar .dropdown ul li:hover>a {
-      color: #FCD13A;
-    }
-
-    .navbar .dropdown:hover>ul {
-      opacity: 1;
-      top: 100%;
-      visibility: visible;
-    }
-
-    .navbar .dropdown .dropdown ul {
-      top: 0;
-      left: calc(100% - 30px);
-      visibility: hidden;
-    }
-
-    .navbar .dropdown .dropdown:hover>ul {
-      opacity: 1;
-      top: 0;
-      left: 100%;
-      visibility: visible;
-    }
-
-    @media (max-width: 1366px) {
-      .navbar .dropdown .dropdown ul {
-        left: -90%;
-      }
-
-      .navbar .dropdown .dropdown:hover>ul {
-        left: -100%;
-      }
-    }
-
-
-    /* Mobile Navigation  */
-
-    .mobile-nav-toggle {
-      color: #000000;
-      font-size: 28px;
-      cursor: pointer;
-      display: none;
-      line-height: 0;
-      transition: 0.5s;
-    }
-
-    .mobile-nav-toggle.bi-x {
-      color: #fff;
-    }
-
-    @media (max-width: 991px) {
-      .mobile-nav-toggle {
-        display: block;
-      }
-
-      .navbar ul {
-        display: none;
-      }
-    }
-
-    .navbar-mobile {
-      position: fixed;
-      overflow: hidden;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: rgba(40, 58, 90, 0.9);
-      transition: 0.3s;
-
-    }
-    body{
-      background-color: yellow;
-    }
-
-    .navbar-mobile .mobile-nav-toggle {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-    }
-
-    .navbar-mobile ul {
-      display: block;
-      height: 50vh;
-      position: absolute;
-      top: 55px;
-      right: 15px;
-      bottom: 15px;
-      left: 15px;
-      padding: 10px 0;
-      border-radius: 10px;
-      background-color: #fff;
-      overflow-y: auto;
-      transition: 0.3s;
-    }
-
-
-    .navbar-mobile a,
-    .navbar-mobile a:focus {
-      padding: 10px 20px;
-      font-size: 15px;
-      color: #024893;
-    }
-
-    .navbar-mobile a:hover,
-    .navbar-mobile .active,
-    .navbar-mobile li:hover>a {
-      color: #FCD13A;
-    }
-
-    .navbar-mobile .getstarted,
-    .navbar-mobile .getstarted:focus {
-      margin: 15px;
-      color: #024893;
-    }
-
-    .navbar-mobile .dropdown ul {
-      position: static;
-      display: none;
-      margin: 10px 20px;
-      padding: 10px 0;
-      z-index: 999;
-      opacity: 1;
-      visibility: visible;
-      background: #fff;
-      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    }
-
-    .navbar-mobile .dropdown ul li {
-      min-width: 200px;
-    }
-
-    .navbar-mobile .dropdown ul a {
-      padding: 10px 20px;
-    }
-
-    .navbar-mobile .dropdown ul a i {
-      font-size: 12px;
-    }
-
-    .navbar-mobile .dropdown ul a:hover,
-    .navbar-mobile .dropdown ul .active:hover,
-    .navbar-mobile .dropdown ul li:hover>a {
-      color: #FCD13A;
-    }
-
-    .navbar-mobile .dropdown>.dropdown-active {
-      display: block;
-    }
-    .img-fluid{
-     max-width: 20%;
-    }
-  </style>
-</head>
-
-
+<html>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<style>
+.pb-100 {
+	padding-bottom: 100px;
+}
+.pt-100 {
+	padding-top: 100px;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.section-title {
+	position: relative;
+}
+.section-title p {
+	font-size: 16px;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+.section-title h4 {
+	font-size: 40px;
+	font-weight: 600;
+	text-transform: capitalize;
+	position: relative;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+.section-title h4::before {
+	position: absolute;
+	content: "";
+	width: 80px;
+	height: 2px;
+	background-color: #d8d8d8;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+}
+.section-title h4::after {
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 2px;
+	background-color: #FF7200;
+	left: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -25px;
+}
+.blog-img {
+	position: relative;
+}
+.blog-img img {
+	width: 100%;
+}
+.post-category a {
+	display: inline-block;
+	background-color: #FF7200;
+	color: #fff;
+	font-size: 15px;
+	padding: 5px 20px;
+}
+.single-blog:hover img {
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"
+}
+.post-category {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.blog-content {
+	padding: 30px 20px;
+}
+.single-blog {
+	border: 1px solid #eee;
+}
+.blog-title h4 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.meta ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.meta {
+	margin-bottom: 20px;
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+}
+.blog-content a.box_btn {
+	display: inline-block;
+	background-color: #FF7200;
+	padding: 5px 15px;
+	color: #fff;
+	text-transform: capitalize;
+	margin-top: 20px;
+}
+a.box_btn::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #CC5B00;
+	left: -100%;
+	top: 0;
+	-webkit-transition: .5s;
+	transition: .5s;
+	z-index: -1;
+}
+a.box_btn {
+	overflow: hidden;
+	z-index: 2;
+	-webkit-transition: .5s;
+	transition: .5s;
+	position: relative;
+	text-decoration:none;
+}
+a.box_btn:hover::before {
+	left: 0;
+	z-index: -1;
+}
+</style>
 <body>
-
-
-  <header id="header" class="fixed-top " data-aos="slide-down">
-    <div class="container d-flex align-items-center">
-
-      <!-- <h1 class="logo me-auto"><a href="index.html">Illume</a></h1> -->
-
-      <a href="index.html" class="logo me-auto logo-mob"><img src="assets/img/illume-logo.png" alt="" class="img-fluid"
-          style="height: fit-content; width: fit-content;"></a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="dropdown"><a href="service.html"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="service.html">Direct tax and GST services</a></li>
-              <li><a href="s2.html">International tax and transfer pricing services</a></li>
-              <li><a href="s3.html">Regulatory services</a></li>
-              <li><a href="s4.html">Transaction support</a></li>
-              <li><a href="s5.html">Business and corporate services</a></li>
-              <li><a href="s5.html">ESG Services</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="about.html">About</a></li>
-          <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
-          <button class="btn btn-primary btn-sm mx-3 book"> <a style="padding: 0px; text-decoration: none;"
-              href="https://api.whatsapp.com/send?phone=918369850587&text=Hello" target="_blank">Connect</a></button>
-          <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle text-dark bg-dark"></i>
-      </nav><!-- .navbar -->
+  <section class="blog-me pt-100 pb-100" id="blog">
+    <div class="container">
+       <div class="row">
+          <div class="col-xl-6 mx-auto text-center">
+             <div class="section-title mb-100">
+             <h4>latest blog</h4>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-lg-4 col-md-6">
+             <!-- Single Blog -->
+             <div class="single-blog">
+                <div class="blog-img">
+                   <img src="./assets/img/angle about.JPG" width="50px" alt="">
+                   <div class="post-category">
+                      <a href="#">Creative</a>
+                   </div>
+                </div>
+                <div class="blog-content">
+                   <div class="blog-title">
+                      <h4><a href="#">Mobilies UX Treend</a></h4>
+                      <div class="meta">
+                         <ul>
+                            <li>04 June 2018</li>
+                         </ul>
+                      </div>
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.</p>
+                   <a href="#" class="box_btn">read more</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+             <!-- Single Blog -->
+             <div class="single-blog">
+                <div class="blog-img">
+                   <img src="http://infinityflamesoft.com/html/abal-preview/assets/img/blog/blog2.jpg" alt="">
+                   <div class="post-category">
+                      <a href="#">Creative</a>
+                   </div>
+                </div>
+                <div class="blog-content">
+                   <div class="blog-title">
+                      <h4><a href="#">Mobilies UX Treend</a></h4>
+                      <div class="meta">
+                         <ul>
+                            <li>23 June 2018</li>
+                         </ul>
+                      </div>
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.</p>
+                   <a href="#" class="box_btn">read more</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+             <!-- Single Blog -->
+             <div class="single-blog">
+                <div class="blog-img">
+                   <img src="http://infinityflamesoft.com/html/abal-preview/assets/img/blog/blog3.jpg" alt="">
+                   <div class="post-category">
+                      <a href="#">Creative</a>
+                   </div>
+                </div>
+                <div class="blog-content">
+                   <div class="blog-title">
+                      <h4><a href="#">Mobilies UX Treend</a></h4>
+                      <div class="meta">
+                         <ul>
+                            <li>31 July 2018</li>
+                         </ul>
+                      </div>
+                   </div>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.</p>
+                   <a href="#" class="box_btn">read more</a>
+                </div>
+             </div>
+          </div>
+       </div>
     </div>
-  </header><!-- End Header -->
+ </section>
+<script>
 
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-  <script>
-
-
-  </script>
+</script>
 
 </body>
-
 </html>

@@ -305,9 +305,10 @@
       color: #024893;
       margin: 5% 0;
     }
+
     .article-title:hover {
       color: #1792d2;
- 
+
     }
 
     .article-read-more,
@@ -366,9 +367,10 @@
     .sidebar {
       max-width: 35%;
     }
-    .sidebar{
+
+    .sidebar {
       margin-left: 10%;
-  
+
     }
 
     footer {
@@ -417,17 +419,19 @@
       nav li {
         margin: 0.5em 0;
       }
+
       .container-flex {
-      max-width: 90vw;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1em;
-    }
-    .sidebar{
-      margin-left: 0%;
-  
-    }
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+      }
+
+      .sidebar {
+        margin-left: 0%;
+
+      }
 
     }
 
@@ -485,15 +489,58 @@
     .my-float {
       margin-top: 16px;
     }
-    
+
     hr.new {
       opacity: 1;
-  border: 1px solid #143774;
-  width: 50px;
-  border-radius: 2px;
-}
-
+      border: 1px solid #143774;
+      width: 50px;
+      border-radius: 2px;
+    }
   </style>
+  <script type="text/javascript">
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -538,7 +585,7 @@
   </section>
   <div class="container container-flex">
     <main role="main">
-      <article class="article-featured" data-aos="fade-right">
+      <article class="article-featured filterDiv it" data-aos="fade-right">
         <h2 class="article-title">SAT Ruling To Aid Appointment of Independent Directors</h2>
         <img src="./assets/img/Sebi.jpg" alt="simple white desk on a white wall with a plant on the far right side"
           class="article-image">
@@ -553,8 +600,8 @@
       <article class="article-featured" data-aos="fade-right">
         <h2 class="article-title">SEBI Consulting Papers For The Alternative Investment Funds (‘AIFs’) and Foreign
           Venture Capital Investors (‘FVCIs’)</h2>
-        <img src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg" alt="simple white desk on a white wall with a plant on the far right side"
-          class="article-image">
+        <img src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg"
+          alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
         <p class="article-info">June 06, 2023 | 3 comments</p>
         <p class="article-body">The Securities and Exchange Board of India (‘SEBI’) has issued new series of
           consulting papers for the alternative investment
@@ -568,11 +615,13 @@
         <h2 class="article-title">Compulsorily Convertible Debentures (‘CCD’) May Not Be Treated as Financial Debt But
           the Unpaid Interest On CCDs Is to be Treated As Financial Debt For the Purpose Of
           Insolvency</h2>
-        <img src="./assets/img/Compulsory-convertible-debentures.png" alt="simple white desk on a white wall with a plant on the far right side"
-          class="article-image">
+        <img src="./assets/img/Compulsory-convertible-debentures.png"
+          alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
         <p class="article-info">June 06, 2023 | 3 comments</p>
-        <p class="article-body">In a recent ruling, the Hon’ble National Company Law Tribunal (‘NCLT’) evaluated as to whether the principal amount 
-          compulsorily convertible debentures (‘CCDs’) and / or the interest thereon constitute financial debt as per the provisions of
+        <p class="article-body">In a recent ruling, the Hon’ble National Company Law Tribunal (‘NCLT’) evaluated as to
+          whether the principal amount
+          compulsorily convertible debentures (‘CCDs’) and / or the interest thereon constitute financial debt as per
+          the provisions of
           the Invsolvency and Bankruptcy Code, 2015 (‘IBC’)</p>
         <a href="./blog/blog3.html" class="article-read-more">CONTINUE READING</a>
       </article>
@@ -582,8 +631,22 @@
         <img src="./assets/img/angle.JPG" alt="simple white desk on a white wall with a plant on the far right side"
           class="article-image">
         <p class="article-info">June 06, 2023 | 3 comments</p>
-        <p class="article-body">Pursuant to the interaction with various stakeholders, the Ministry of Finance / CBDT decided to make amendments to the Angel Tax 
+        <p class="article-body">Pursuant to the interaction with various stakeholders, the Ministry of Finance / CBDT
+          decided to make amendments to the Angel Tax
           Provisions and Rule 11UA</p>
+        <a href="./blog/blog4.html" class="article-read-more">CONTINUE READING</a>
+      </article>
+      <article class="article-featured" data-aos="fade-right">
+        <h2 class="article-title">Redeemable preference shares to be treated as debt in certain
+          circumstances<sup>1</sup></h2>
+        <img src="./assets/img/redeemable preference.jpg"
+          alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+        <p class="article-info">June 06, 2023 | 3 comments</p>
+        <p class="article-body">In a recent ruling, the Hon’ble Delhi High Court evaluated as to whether redeemable
+          preference shares (‘RPS’) issued by a
+          company could be treated as a part of the net-worth of the Company and in what circumstances the RPS could be
+          treated
+          as debt:</p>
         <a href="./blog/blog4.html" class="article-read-more">CONTINUE READING</a>
       </article>
 
@@ -641,36 +704,33 @@
 
     <aside class="sidebar" data-aos="fade-left">
       <div class="sidebar-widget">
-<br><br>
+        <br><br>
         <h5 class="list-title">Topics</h5>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-          <option selected>Topics</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('it')"> it</button>
+  
+        </div>
         <br><br>
         <h3 class="widget-title">RECENT POSTS</h3>
         <hr class="new">
         <div class="widget-recent-post">
           <br>
           <h4 class="widget-recent-post-title"><a href="blog/blog1.html">SAT ruling to aid appointment...</a></h4>
-          <img
-            src="./assets/img/Sebi.jpg"
-            alt="two dumplings on a wood plate with chopsticks" class="widget-image">
+          <img src="./assets/img/Sebi.jpg" alt="two dumplings on a wood plate with chopsticks" class="widget-image">
         </div>
         <br>
         <div class="widget-recent-post">
-          <h4 class="widget-recent-post-title"><a href="blog/blog2.html">SEBI Consulting papers for the Alternative....</a></h4>
-          <img
-            src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg"
+          <h4 class="widget-recent-post-title"><a href="blog/blog2.html">SEBI Consulting papers for the
+              Alternative....</a></h4>
+          <img src="./assets/img/SEBI-prescribes-conditions_Dec22_cleanup.jpg"
             alt="a chair white chair at a white desk on a white wall" class="widget-image">
         </div>
         <br>
         <div class="widget-recent-post">
-          <h4 class="widget-recent-post-title"><a href="blog/blog3.html">Compulsorily convertible debentures (‘CCC’)...</a></h4>
-          <img
-            src="./assets/img/Compulsory-convertible-debentures.png"
+          <h4 class="widget-recent-post-title"><a href="blog/blog3.html">Compulsorily convertible debentures
+              (‘CCC’)...</a></h4>
+          <img src="./assets/img/Compulsory-convertible-debentures.png"
             alt="a green plant in a clear, round vase with water in it" class="widget-image">
         </div>
       </div>
