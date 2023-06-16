@@ -141,17 +141,17 @@
             background-color: #3e8e41;
         }
 
-        .col-2 ul li {
+        .col-3 ul li {
             padding: 4px;
         }
 
-        .col-2 ul li:hover {
+        .col-3 ul li:hover {
             background-color: #0c3c53;
             color: white;
             padding: 4px;
         }
 
-        .col-2 button {
+        .col-3 button {
             width: 200px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             background: transparent;
@@ -181,6 +181,8 @@
             color: white;
         }
 
+      
+
         @media (max-width:700px) {
             main .row {
                 display: flex;
@@ -188,15 +190,16 @@
             }
 
             main .row .col-5,
-            .col-2 {
+            .col-3 {
                 width: 100%;
                 transition: .9s;
             }
 
-            .col-2 button {
+            .col-3 button {
                 width: 200px;
 
             }
+
         }
 
         hr {
@@ -212,12 +215,21 @@
             font-family: sans-serif;
             margin-bottom: 3em;
         }
-        .back{
+
+        .back {
             background: url('./assets/img/blogs-back.jpg');
             height: 50vh;
             width: 100%;
             background-size: cover;
         }
+
+        .dropdown button {
+            background-color: #0c3c53;
+            color: white;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
     </style>
 
 </head>
@@ -257,11 +269,11 @@
         </div>
     </header><!-- End Header -->
     <section class="back">
-        
+
     </section>
     <section class="headerr" style="margin-top: 60px;">
         <div class='container'>
-           
+
             <div class='site-title'>
                 <h1>Blogs by illume</h1>
                 <p class='subtitle'>A blog exploring minimalism in life.</p>
@@ -281,12 +293,12 @@
 
 
     <main>
-        
+
         <div class="row justify-content-center w-100">
 
 
 
-            <div class="col-5 ">
+            <div class="col-5 ps-5 ">
                 <div class="blogs">
                     <div class="filterDiv it w-100  text-start">
                         <h4>SAT Ruling To Aid Appointment of Independent Directors</h4>
@@ -372,12 +384,12 @@
                         <button><a href="./blog/blog7.html">continue reading</a></button>
                         <hr>
                     </div>
-                    
+
 
                 </div>
 
             </div>
-            <div class="col-2 ps-5">
+            <div class="col-3 ps-5">
                 <div class="recent_blogs">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -393,10 +405,11 @@
 
                         </ul>
                     </div>
+                    
                 </div>
             </div>
         </div>
-        
+
     </main>
 
 
